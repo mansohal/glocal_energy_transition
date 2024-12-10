@@ -1,0 +1,75 @@
+connection:
+  type: dict
+  required: true
+connectionType:
+  type: string
+  default: sqlite
+  allowed: [pyodbc, sqlalchemy, postgres, sqlite, mysql, sqlserver, access]
+connectionArguments:
+  type: dict
+  default: null
+  nullable: true
+type:
+  type: string
+  default: par
+  allowed: [par, set]
+indexSubstitutions:
+  type: dict
+  default: null
+  nullable: true
+valueSubstitutions:
+  type: dict
+  default: null
+  nullable: true
+dTypeMap:
+  type: dict
+  default: null
+  nullable: true
+readSQLArguments:
+  type: dict
+  default: null
+  nullable: true
+trace:
+  type: integer
+  default: 0
+symbols:
+  type: list
+  required: true
+  schema:
+    type: dict
+    schema:
+      name:
+        type: string
+        required: true
+      query:
+        type: string
+        required: true
+      type:
+        type: string
+        default: null
+        allowed: [par, set]
+        nullable: true
+      valueColumns:
+        default: infer
+        oneof:
+        - type: string
+          allowed: [infer, lastCol, none]
+        - type: list
+          schema:
+            type: string
+      indexSubstitutions:
+        type: dict
+        default: null
+        nullable: true
+      valueSubstitutions:
+        type: dict
+        default: null
+        nullable: true
+      dTypeMap:
+        type: dict
+        default: null
+        nullable: true
+      readSQLArguments:
+        type: dict
+        default: null
+        nullable: true

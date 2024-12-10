@@ -1,0 +1,25 @@
+dropDomainViolations:
+  type: [boolean, string]
+  default: false
+  allowed: [true, false, before, after]
+trace:
+  type: integer
+  default: 0
+symbols:
+  default: all
+  oneof:
+    - type: string
+      allowed: [all]
+    - type: list
+      schema:
+        type: dict
+        allow_unknown: false
+        schema:
+          name:
+            type: string
+            required: true
+          dropDomainViolations:
+            type: [boolean, string]
+            default: null
+            allowed: [true, false, before, after]
+            nullable: true

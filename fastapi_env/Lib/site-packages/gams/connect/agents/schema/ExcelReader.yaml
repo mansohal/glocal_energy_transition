@@ -1,0 +1,121 @@
+file:
+  type: string
+  required: true
+type:
+  type: string
+  default: par
+  allowed: [par, set]
+columnDimension:
+  type: integer
+  default: 1
+  min: 0
+  max: 20
+rowDimension:
+  type: integer
+  default: 1
+  min: 0
+  max: 20
+autoMerge:
+  type: boolean
+  default: false
+mergedCells:
+  type: boolean
+  default: false
+ignoreText:
+  type: [boolean, string]
+  default: infer
+  allowed: [true, false, infer]
+indexSubstitutions:
+  type: dict
+  default: null
+  nullable: true
+valueSubstitutions:
+  type: dict
+  default: null
+  nullable: true
+skipEmpty:
+  type: integer
+  default: 1
+index:
+  type: string
+  default: null
+  required: true
+  excludes: [symbols]
+  nullable: true
+trace:
+  type: integer
+  default: 0
+symbols:
+  type: list
+  default: null
+  required: true
+  excludes: [index]
+  nullable: true
+  schema:
+    type: dict
+    schema:
+      name:
+        type: string
+        required: true
+      type:
+        type: string
+        default: null
+        allowed: [par, set]
+        nullable: true
+      range:
+        type: string
+        default: null
+        nullable: true
+      columnDimension:
+        type: integer
+        default: null
+        min: 0
+        max: 20
+        nullable: true
+      rowDimension:
+        type: integer
+        default: null
+        min: 0
+        max: 20
+        nullable: true
+      autoMerge:
+        type: boolean
+        default: null
+        nullable: true
+      mergedCells:
+        type: boolean
+        default: null
+        nullable: true
+      ignoreColumns:
+        default: null
+        nullable: true
+        oneof:
+        - type: [integer, string]
+        - type: list
+          schema:
+            type: [integer, string]
+      ignoreRows:
+        default: null
+        nullable: true
+        oneof:
+        - type: [integer, string]
+        - type: list
+          schema:
+            type: [integer, string]
+      ignoreText:
+        type: [boolean, string]
+        default: null
+        allowed: [true, false, infer]
+        nullable: true
+      indexSubstitutions:
+        type: dict
+        default: null
+        nullable: true
+      valueSubstitutions:
+        type: dict
+        default: null
+        nullable: true
+      skipEmpty:
+        type: integer
+        default: null
+        nullable: true

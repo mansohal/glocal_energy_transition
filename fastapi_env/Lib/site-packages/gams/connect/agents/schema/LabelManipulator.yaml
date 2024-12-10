@@ -1,0 +1,99 @@
+case:
+  type: dict
+  default: null
+  required: true
+  excludes: [map, regex, code]
+  nullable: true
+  schema:
+    rule:
+      type: string
+      required: true
+      allowed: [lower, upper, capitalize]
+    outputSet:
+      type: string
+      default: null
+      nullable: true
+code:
+  type: dict
+  default: null
+  required: true
+  excludes: [map, case, regex]
+  nullable: true
+  schema:
+    rule:
+      type: string
+      required: true
+    ruleIdentifier:
+      type: string
+      default: x
+    outputSet:
+      type: string
+      default: null
+      nullable: true
+map:
+  type: dict
+  default: null
+  required: true
+  excludes: [case, regex, code]
+  nullable: true
+  schema:
+    setName:
+      type: string
+      required: true
+    invert:
+      type: boolean
+      default: false
+regex:
+  type: dict
+  default: null
+  required: true
+  excludes: [map, case, code]
+  nullable: true
+  schema:
+    pattern:
+      type: string
+      required: true
+    replace:
+      type: string
+      required: true
+    outputSet:
+      type: string
+      default: null
+      nullable: true
+dimension:
+  default: all
+  oneof:
+  - type: string
+    allowed: [all]
+  - type: integer
+    min: 1
+    max: 20
+trace:
+  type: integer
+  default: 0
+symbols:
+  default: all
+  oneof:
+  - type: string
+    allowed: [all]
+  - type: list
+    schema:
+      type: dict
+      allow_unknown: false
+      schema:
+        name:
+          type: string
+          required: true
+        newName:
+          type: string
+          default: null
+          nullable: true
+        dimension:
+          default: null
+          nullable: true
+          oneof:
+          - type: string
+            allowed: [all]
+          - type: integer
+            min: 1
+            max: 20

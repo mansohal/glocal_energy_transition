@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: gamspy_base
+Version: 48.4.0
+Description-Content-Type: text/markdown
+
+# GAMSPy Base
+
+GAMSPy Base is a subset of full GAMS installation which can be found at: https://gams.com/download/.
+
+## How to use it in other GAMS APIs
+
+[Control](https://www.gams.com/latest/docs/API_PY_CONTROL.html):
+
+```
+from gams import GamsWorkspace
+from gamspy_base import directory
+ws = GamsWorkspace(system_directory=directory)
+```
+
+[Magic](https://www.gams.com/latest/docs/API_PY_MAGIC.html):
+
+```
+%reload_ext gams.magic
+from gamspy_base import directory
+gams.reset(directory)
+```
+
+[GamsInteractive](https://www.gams.com/latest/docs/API_PY_MAGIC.html#PY_MAGIC_INTERACTIVE):
+
+```
+from gamspy_base import directory
+from gams.magic import GamsInteractive
+gams = GamsInteractive()
+gams.reset(directory)
+```
+
+[Transfer](https://www.gams.com/latest/docs/API_PY_GAMSTRANSFER.html):
+
+```
+import gams.transfer as gt
+from gamspy_base import directory
+m = gt.Container(system_directory=directory)
+```
+
+[Connect](https://www.gams.com/latest/docs/UG_GAMSCONNECT.html#UG_GAMSCONNECT_CUSTOM_PYTHON_CODE):
+
+```
+from gams.connect import ConnectDatabase
+from gamspy_base import directory
+cdb = ConnectDatabase(directory)
+```
+
+[GDX Expert-Level](https://www.gams.com/latest/docs/apis/expert-level/gdxqdrep.html):
+
+```
+import gams.core.gdx as gdx
+from gamspy_base import directory
+rc = gdx.gdxGetReadyD(directory, 255)
+```
+
+## License Agreement
+
+By downloading this software, you agree to the [GAMS license agreement](https://www.gams.com/GAMS_EULA.pdf).

@@ -1,0 +1,349 @@
+*
+* optconopt.def
+*
+
+threads integer 0 1 0 maxint 1 5 Number of threads used by Conopt internally
+LF2DRV integer 0 10 0 maxint 0 4
+Lim_Err_2DDir integer 0 10 0 maxint 1 1  Limit on errors in Directional Second Derivative evaluation.
+LFCON3 integer 0 0 minint maxint 0 4
+LFDEGI integer 0 100 0 maxint 0 4
+Lim_Start_Degen integer 0 100 0 maxint 1 1  Limit on number of degenerate iterations before starting degeneracy breaking strategy.
+LFDERR integer 0 10 1 maxint 0 4
+Lim_Msg_Dbg_1Drv integer 0 10 1 maxint 1 2  Limit on number of error messages from function and derivative debugger.
+LFDLIM integer 0 0 minint maxint 0 4
+LFEERR integer 0 0 0 maxint 0 4
+Lim_Err_Fnc_Drv integer 0 0 0 maxint 1 1  Limit on number of function evaluation errors. Overwrites GAMS Domlim option
+LFEMSG integer 0 10 1 maxint 0 4
+Lim_Msg_Large integer 0 10 1 maxint 1 3  Limit on number of error messages related to large function value and Jacobian elements.
+LFHDIA integer 0 0 minint maxint 0 4
+LFHSOK integer 0 10 0 maxint 0 4
+Lim_Err_Hessian integer 0 10 0 maxint 1 1  Limit on errors in Hessian evaluation.
+LFILOG integer 0 1 1 maxint 0 4
+Frq_Log_Simple integer 0 1 1 maxint 1 3  Frequency for log-lines for non-SLP/SQP iterations.
+LFILOS integer 0 1 1 maxint 0 4
+Frq_Log_SlpSqp integer 0 1 1 maxint 1 3  Frequency for log-lines for SLP or SQP iterations.
+LFINCR integer 0 0 minint maxint 0 4
+LFIST1 integer 0 0 minint maxint 0 4
+LFIST2 integer 0 0 minint maxint 0 4
+LFITER integer 0 10000 0 maxint 0 4
+Lim_Iteration integer 0 10000 0 maxint 1 1  Maximum number of iterations. Overwrites GAMS Iterlim option.
+LFLERR integer 0 0 minint maxint 0 4
+LFMARK integer 0 0 minint maxint 0 4
+Lim_ItrReinv integer 0 0 minint maxint 0 4
+Lim_MdlStep integer 0 0 minint maxint 0 4
+LFMXNS integer 0 0 0 maxint 0 4
+Lim_NewSuper integer 0 0 0 maxint 1 1  Maximum number of new superbasic variables added in one iteration.
+LFMXP4 integer 0 0 minint maxint 0 4
+LFMXQN integer 0 0 minint maxint 0 4
+Lim_MaxStep integer 0 0 minint maxint 0 4
+LFNICR integer 0 20 2 maxint 0 4
+Lim_SlowPrg integer 0 20 2 maxint 1 1  Limit on number of iterations with slow progress (relative less than Tol_Obj_Change).
+LFNOUI integer 0 0 minint maxint 0 4
+LFNSUP integer 0 5 5 maxint 0 4
+Lim_RedHess integer 0 5 5 maxint 1 1  Maximum number of superbasic variables in the approximation to the Reduced Hessian.
+LFNUPD integer 0 0 minint maxint 0 4
+LFNWIT integer 0 0 minint maxint 0 4
+LFONEB integer 0 0 minint maxint 0 4
+LFONEW integer 0 0 minint maxint 0 4
+LFRINL integer 0 0 minint maxint 0 4
+LFRINQ integer 0 0 minint maxint 0 4
+LFRINS integer 0 0 minint maxint 0 4
+LFRIN2 integer 0 0 minint maxint 0 4
+LFRSCN integer 0 0 minint maxint 0 4
+LFSCAL integer 0 5 1 maxint 0 4
+Frq_Rescale integer 0 5 1 maxint 1 1  Rescaling frequency.
+LFSLIM integer 0 0 minint maxint 0 4
+LFSLOP integer 0 0 minint maxint 0 4
+LFSQPP integer 0 0 minint maxint 0 4
+LFSQPL integer 0 0 minint maxint 0 4
+LFSTAL integer 0 100 20 maxint 0 4
+Lim_StallIter integer 0 100 20 maxint 1 1  Limit on the number of stalled iterations.
+LFTEST integer 0 0 minint maxint 0 4
+LFTMSG integer 0 25 0 maxint 0 4
+Lim_Pre_Msg integer 0 25 0 maxint 1 3  Limit on number of error messages related to infeasible pre-triangle.
+LMethod integer 0 1 1 3 0 4
+Lin_Method enumint 0 1 1 1  Method used to determine if and/or which Linear Feasibility Models to use
+ 1 1
+ 2 1
+ 3 1
+NRounds integer 0 4 1 4 0 4
+Num_Rounds integer 0 4 1 4 1 1  Number of rounds with Linear Feasibility Model
+FByCol boolean 0 1 0 4
+FByRow boolean 0 1 0 4
+NODEFC boolean 0 0 0 4
+Flg_NoDefc boolean 0 0 1 1  Flag for turning definitional constraints off. The default is false.
+FORDEFC boolean 0 0 0 4
+Flg_ForDefc boolean 0 0 1 1  Flag for forcing definitional constraints on.
+DefW double 0 0 mindouble maxdouble 0 4
+NewPhase0 boolean 0 1 0 4
+LKDEB2 integer 0 0 minint maxint 0 4
+LODEB2 integer 0 0 minint maxint 0 4
+LKDEBG integer 0 0 -1 maxint 0 4
+Lim_Dbg_1Drv integer 0 0 -1 maxint 1 2  Flag for debugging of first derivatives
+ -1
+ 0
+ +n
+LSDEBI boolean 0 0 0 4
+Flg_Dbg_Intv boolean 0 0 1 1  Flag for debugging interval evaluations.
+LKDUMI integer 0 0 minint maxint 0 4
+LKDUMM integer 0 0 minint maxint 0 4
+LKDUM1 integer 0 0 minint maxint 0 4
+LKDUM2 integer 0 0 minint maxint 0 4
+LKDUM3 integer 0 0 minint maxint 0 4
+LKDUMP integer 0 0 minint maxint 0 4
+LFLOG integer 0 0 minint maxint 0 4
+LFSUMM integer 0 0 minint maxint 0 4
+LMDEBG integer 0 0 0 1 0 4
+Mtd_Dbg_1Drv enumint 0 0 1 1  Method used by the function and derivative debugger.
+ 0 1
+ 1 1
+LMDEGI integer 0 0 minint maxint 0 4
+LMNDIA integer 0 0 0 1 0 4
+Mtd_RedHess enumint 0 0 1 1  Method for initializing the diagonal of the approximate Reduced Hessian
+ 0 1
+ 1 1
+LMMXSF integer 0 0 0 1 0 4
+Mtd_Step_Phase0 enumint 0 0 1 1  Method used to determine the step in Phase 0.
+ 0 1
+ 1 1
+LMMXST integer 0 0 0 1 0 4
+Mtd_Step_Tight enumint 0 0 1 1  Method used to determine the maximum step while tightening tolerances.
+ 0 1
+ 1 1
+Scale_Infeas boolean 0 1 0 4
+LMSCAL integer 0 3 0 3 0 4
+Mtd_Scale enumint 0 3 1 1  Method used for scaling.
+ 0 1
+ 1 1
+ 2 1
+ 3 1
+LOBNDT integer 0 0 minint maxint 0 4
+LOCLMX integer 0 0 minint maxint 0 4
+LOCNPT integer 0 0 minint maxint 0 4
+LOCON3 integer 0 0 minint maxint 0 4
+LOCON4 integer 0 0 minint maxint 0 4
+LOCORP integer 0 0 minint maxint 0 4
+LODEFC integer 0 0 minint maxint 0 4
+LODEFP integer 0 0 minint maxint 0 4
+LODEGI integer 0 0 minint maxint 0 4
+LOFFS integer 0 0 minint maxint 0 4
+LOREDI integer 0 0 minint maxint 0 4
+LOWRIT integer 0 0 minint maxint 0 4
+LOHESS integer 0 0 minint maxint 0 4
+LOINIB integer 0 0 minint maxint 0 4
+LOINIP integer 0 0 minint maxint 0 4
+LOINIM integer 0 0 minint maxint 0 4
+LOINIS integer 0 0 minint maxint 0 4
+LOINVL integer 0 0 minint maxint 0 4
+LOFMXP integer 0 0 minint maxint 0 4
+LOINTV integer 0 0 minint maxint 0 4
+LONEWT integer 0 0 minint maxint 0 4
+LONEGC integer 0 0 minint maxint 0 4
+LOOLDB integer 0 0 minint maxint 0 4
+LOONED integer 0 0 minint maxint 0 4
+LOOPTC integer 0 0 minint maxint 0 4
+LOREDG integer 0 0 minint maxint 0 4
+LORHES integer 0 0 minint maxint 0 4
+LOSCAL integer 0 0 minint maxint 0 4
+LOSETP integer 0 0 minint maxint 0 4
+LOSLP integer 0 0 minint maxint 0 4
+LOSQP integer 0 0 minint maxint 0 4
+LOSTAT integer 0 0 minint maxint 0 4
+LOSTPM integer 0 0 minint maxint 0 4
+LOTANG integer 0 0 minint maxint 0 4
+LOTIGH integer 0 0 minint maxint 0 4
+LOTRIA integer 0 0 minint maxint 0 4
+LOUPDT integer 0 0 minint maxint 0 4
+LSSYSE boolean 0 1 0 4
+ATHOME boolean 0 1 0 4
+LSAZCL boolean 0 1 0 4
+LSAZRW boolean 0 1 0 4
+LSDNLP boolean 0 1 0 4
+LSESLP boolean 0 1 0 4
+Flg_SLPMode boolean 0 1 1 1  Flag for enabling SLP mode.
+LSESQP boolean 0 1 0 4
+Flg_SQPMode boolean 0 1 1 1  Flag for enabling of SQP mode.
+LSEAIP boolean 0 1 0 4
+Flg_AdjIniP boolean 0 1 1 1  Flag for calling Adjust Initial Point
+LFAIPH integer 0 0 minint maxint 0 4
+LFAIPD double 0 0 mindouble maxdouble 0 4
+LFAIPM double 0 0 mindouble maxdouble 0 4
+LFAIPR double 0 0 mindouble maxdouble 0 4
+LFAIPN double 0 0 mindouble maxdouble 0 4
+LSTSQP boolean 0 1 0 4
+LSFLSH boolean 0 1 0 4
+LKFLSH integer 0 0 minint maxint 0 4
+FVforAll boolean 0 1 0 4
+FVincLin boolean 0 1 0 4
+LSLACK boolean 0 0 0 4
+Flg_Crash_Slack boolean 0 0 1 1  Flag for pre-selecting slacks for the initial basis.
+LSNOP2 boolean 0 1 0 4
+LSPFBS boolean 0 1 0 4
+LSPRES boolean 0 1 0 4
+DoNoPen boolean 0 1 0 4
+Flg_NoPen boolean 0 1 1 1  Flag for allowing the Model without penalty constraints
+RTNoPn double 0 0.1 0 maxdouble 0 4
+Rat_NoPen double 0 0.1 0 maxdouble 1 1  Limit on ratio of penalty constraints for the No_Penalty model to be solved
+DoNegCurve boolean 0 1 0 4
+Flg_NegCurve boolean 0 1 1 1  Flag for testing for negative curvature when apparently optimal
+IsConvex boolean 0 0 0 4
+Flg_Convex boolean 0 0 1 1  Flag for defining a model to be convex
+LSPRZE boolean 0 1 0 4
+LSPSBS boolean 0 1 0 4
+LSSQRS boolean 0 0 0 4
+Flg_Square boolean 0 0 1 1  Flag for Square System. Alternative to defining modeltype=CNS in GAMS
+TRACECNS boolean 0 0 0 4
+Flg_TraceCNS boolean 0 0 1 1  Flag for tracing a CNS solution.
+TrMINSTEP double 0 0.001 0 1 0 4
+Trace_MinStep double 0 0.001 0 1 1 1  Minimum step between Reinversions when using TraceCNS.
+Test_LUFactor boolean 0 1 0 4
+Test_Update boolean 0 1 0 4
+MAXMEM boolean 0 1 0 4
+RTMAXV double 0 1.e15 1.e5 1.e30 0 4
+Lim_Variable double 0 1.e15 1.e5 1.e30 1 1  Upper bound on solution values and equation activity levels
+RTBOX double 0 10 0.01 1.e6 0 4
+Tol_BoxSize double 0 10 0.01 1.e6 1 1  Initial box size for trust region models for overall model
+RTBOXL double 0 1000 0.01 1.e8 0 4
+Tol_BoxSize_Lin double 0 1000 0.01 1.e8 1 1  Initial box size for trust region models for linear feasibility model
+RTBOXF double 0 10 1 1.e4 0 4
+Tol_Box_LinFac double 0 10 1 1.e4 1 1  Box size factor for linear variables applied to trust region box size
+RTDEFM double 0 1.e4 1.01 maxdouble 0 4
+Tol_Def_Mult double 0 1.e4 1.01 maxdouble 1 1  Largest growth factor allowed in the block of definitional constraints
+RTMINJ double 0 1.e-5 1.e-7 1.e-3 0 4
+Tol_Jac_Min double 0 1.e-5 1.e-7 1.e-3 1 1  Filter for small Jacobian elements to be ignored during scaling.
+RTMINS double 0 1 1.e-10 1 0 4
+Tol_Scale_Min double 0 1 1.e-10 1 1 1  Lower bound for scale factors computed from values and 1st derivatives.
+RTMAXS double 0 1.e25 1 1.e30 0 4
+Tol_Scale_Max double 0 1.e25 1 1.e30 1 1  Upper bound on scale factors.
+RTMINV double 0 1.e-5 1.e-8 1 0 4
+Tol_Scale_Var double 0 1.e-5 1.e-8 1 1 1  Lower bound on x in x*Jac used when scaling.
+RT2DRV double 0 0 mindouble maxdouble 0 4
+RTNWMA double 0 1.e-7 1.e-10 1.e-3 0 4
+Tol_Feas_Max double 0 1.e-7 1.e-10 1.e-3 1 1  Maximum feasibility tolerance (after scaling).
+RTNWMI double 0 4.e-10 3.e-13 1.e-5 0 4
+Tol_Feas_Min double 0 4.e-10 3.e-13 1.e-5 1 1  Minimum feasibility tolerance (after scaling).
+RTNWTR double 0 1.0e-8 3.e-13 1.e-4 0 4
+Tol_Feas_Tria double 0 1.0e-8 3.e-13 1.e-4 1 1  Feasibility tolerance for triangular equations.
+RTNWGRW1 double 0 0 mindouble maxdouble 0 4
+RTNWGRW2 double 0 0 mindouble maxdouble 0 4
+RVOBJL double 0 0 mindouble maxdouble 0 4
+RTREDG double 0 1.e-7 3.e-13 1 0 4
+Tol_Optimality double 0 1.e-7 3.e-13 1 1 1  Optimality tolerance for reduced gradient when feasible.
+RTREDI double 0 1.e-7 3.e-13 1 0 4
+Tol_Opt_Infeas double 0 1.e-7 3.e-13 1 1 1  Optimality tolerance for reduced gradient when infeasible.
+RTRDLI double 0 1.e-10 3.e-13 1.e-4 0 4
+Tol_Opt_LinF double 0 1.e-10 3.e-13 1.e-4 1 1  Optimality tolerance when infeasible in Linear Feasibility Model
+RTPIVA double 0 1.e-10 2.2e-16 1.e-7 0 4
+Tol_Piv_Abs double 0 1.e-10 2.2e-16 1.e-7 1 1  Absolute pivot tolerance.
+RTPIVR double 0 0.05 1.e-3 0.9 0 4
+Tol_Piv_Rel double 0 0.05 1.e-3 0.9 1 1  Relative pivot tolerance during basis factorizations.
+RTPIVT double 0 1.e-5 2.2e-16 1.e-3 0 4
+Tol_Piv_Abs_NLTr double 0 1.e-5 2.2e-16 1.e-3 1 1  Absolute pivot tolerance for nonlinear elements in pre-triangular equations.
+RTPIVU double 0 0.05 1.e-3 0.9 0 4
+Tol_Piv_Rel_Updt double 0 0.05 1.e-3 0.9 1 1  Relative pivot tolerance during basis updates.
+RTIPVA double 0 1.e-7 3.e-13 1.e-3 0 4
+Tol_Piv_Abs_Ini double 0 1.e-7 3.e-13 1.e-3 1 1  Absolute Pivot Tolerance for building initial basis.
+RTIPVR double 0 1.e-3 1.e-4 0.9 0 4
+Tol_Piv_Rel_Ini double 0 1.e-3 1.e-4 0.9 1 1  Relative Pivot Tolerance for building initial basis
+RTPIVS double 0 1.e-8 1.e-10 1.e-6 0 4
+Tol_Piv_Ratio double 0 1.e-8 1.e-10 1.e-6 1 1  Relative pivot tolerance during ratio-test
+RVDLIM double 0 0 mindouble maxdouble 0 4
+RVLUFC double 0 0 mindouble maxdouble 0 4
+RTLUPS double 0 0 mindouble maxdouble 0 4
+RTBND1 double 0 1.e-7 3.e-13 1.e-5 0 4
+Tol_Bound double 0 1.e-7 3.e-13 1.e-5 1 1  Bound filter tolerance for solution values close to a bound.
+RTBNDP double 0 0 mindouble maxdouble 0 4
+RTBNDT double 0 4.e-10 3.e-13 1.e-8 0 4
+Tol_Fixed double 0 4.e-10 3.e-13 1.e-8 1 1  Tolerance for defining variables as fixed based on initial or derived bounds.
+RTONED double 0 0.2 0.05 0.8 0 4
+Tol_Linesearch double 0 0.2 0.05 0.8 1 1  Accuracy of One-dimensional search.
+RTGRDR double 0 0 mindouble maxdouble 0 4
+RTOBJD double 0 0 mindouble maxdouble 0 4
+RTOBJF double 0 0 mindouble maxdouble 0 4
+RTOBJN double 0 0 mindouble maxdouble 0 4
+RTOBJR double 0 3.0e-13 3.0e-14 1.e-6 0 4
+Tol_Obj_Acc double 0 3.0e-13 3.0e-14 1.e-6 1 1  Relative accuracy of the objective function.
+RTOBJL double 0 3.0e-12 3.0e-13 1.0e-5 0 4
+Tol_Obj_Change double 0 3.0e-12 3.0e-13 1.0e-5 1 1  Limit for relative change in objective for well-behaved iterations.
+RTMINA double 0 1.e-20 1.e-30 maxdouble 0 4
+Tol_Zero double 0 1.e-20 1.e-30 maxdouble 1 1  Zero filter for Jacobian elements and inversion results.
+RTDOBW double 0 0 mindouble maxdouble 0 4
+RVSTLM double 0 0 mindouble maxdouble 0 4
+RVSTLN double 0 0 mindouble maxdouble 0 4
+RTZERN double 0 0 mindouble maxdouble 0 4
+RTSFC1 double 0 0 mindouble maxdouble 0 4
+RTSFC2 double 0 0 mindouble maxdouble 0 4
+RTSFC3 double 0 0 mindouble maxdouble 0 4
+RTSFC4 double 0 0 mindouble maxdouble 0 4
+RTERRF double 0 0 mindouble maxdouble 0 4
+RTGLRD double 0 0 mindouble maxdouble 0 4
+RTGLSL double 0 0 mindouble maxdouble 0 4
+RVTIME double 0 10000 0 maxdouble 0 4
+Lim_Time double 0 10000 0 maxdouble 1 1  Time Limit. Overwrites the GAMS Reslim option.
+RVNLMX double 0 0 mindouble maxdouble 0 4
+RVNLWG double 0 0 mindouble maxdouble 0 4
+RVPLIM double 0 0 mindouble maxdouble 0 4
+RVULIM double 0 0 mindouble maxdouble 0 4
+RTLCND double 0 0 mindouble maxdouble 0 4
+RTDCND double 0 0 mindouble maxdouble 0 4
+RVIPIV double 0 0 mindouble maxdouble 0 4
+RVIIPV double 0 0 mindouble maxdouble 0 4
+RT2NRM double 0 0 mindouble maxdouble 0 4
+RTMXJ2 double 0 1.e4 1 maxdouble 0 4
+Lim_Hess_Est double 0 1.e4 1 maxdouble 1 2  Upper bound on second order terms.
+RVNZW double 0 0 mindouble maxdouble 0 4
+RVHESS double 0 0 0 maxdouble 0 4
+HessianMemFac double 0 0 0 maxdouble 1 5  Memory factor for Hessian generation: Skip if #Hessian elements > #Nonlinear Jacobian elements*HessianMemFac, 0 means unlimited.
+WRTPAR boolean 0 1 0 4
+DOTIME boolean 0 1 0 4
+DPIUSR boolean 0 1 0 4
+DPIDEF boolean 0 1 0 4
+DPIPOS boolean 0 1 0 4
+DPLHES boolean 0 1 0 4
+DPPRC2 boolean 0 1 0 4
+DPCOLA boolean 0 1 0 4
+DPSCLR boolean 0 1 0 4
+DPSCLJ boolean 0 1 0 4
+DPSCLL boolean 0 1 0 4
+DPDRVI boolean 0 1 0 4
+DOHESS boolean 0 1 0 4
+Flg_Hessian boolean 0 1 1 5  Flag for computing and using 2nd derivatives as Hessian of Lagrangian.
+DO2DIR boolean 0 1 0 4
+Flg_2DDir boolean 0 1 1 5  Flag for computing and using directional 2nd derivatives.
+DOINTV boolean 0 1 0 4
+Flg_Interv boolean 0 1 1 2  Flag for using intervals in the Preprocessor
+DOPREP boolean 0 1 0 4
+Flg_Prep boolean 0 1 1 2  Flag for using the Preprocessor
+DORANGE boolean 0 1 0 4
+Flg_Range boolean 0 1 1 2  Flag for identifying sets of ranged constraints
+NODEFP2 boolean 0 1 0 4
+DONEW boolean 0 1 0 4
+TESTLG boolean 0 1 0 4
+TESTZM boolean 0 1 0 4
+TESTNA boolean 0 1 0 4
+NOCLOCK boolean 0 1 0 4
+DUMPHEX boolean 0 1 0 4
+nobounds immediate nobounds 0 4
+readfile immediate readfile 0 4
+cooptfile string 0 "" 1 5
+HEAPLIMIT double 0 1e20 0 maxdouble 1 5 Maximum Heap size in MB allowed
+THREADF integer 0 1 0 maxint 1 5 Number of threads used for function evaluation
+THREAD2D integer 0 1 0 maxint 0 5 Number of threads used for second derivatives
+THREADC integer 0 1 0 maxint 1 5 Number of compatibility threads used for comparing different values of THREADS
+domlim synonym LFEERR
+iterlim synonym LFITER
+reslim synonym RVTIME
+*
+* indicator section
+*
+myeolchar EOLCOMM ;#!
+*
+* Groups
+* <group-ident> group <group-number <help-context> <help-text>
+*
+a group 1 1 Algorithmic options
+d group 2 1 Debugging options
+o group 3 1 Output options
+h group 4 0 Hidden options
+l group 5 1 Interface options
+*** End of file

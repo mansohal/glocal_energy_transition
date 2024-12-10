@@ -1,0 +1,92 @@
+file:
+  type: string
+  required: true
+name:
+  type: string
+  required: true
+type:
+  type: string
+  default: par
+  allowed: [par, set]
+indexColumns:
+  default: null
+  nullable: true
+  oneof:
+  - type: [integer, string]
+  - type: list
+    schema:
+      type: [integer, string]
+indexSubstitutions:
+  type: dict
+  default: null
+  nullable: true
+valueColumns:
+  default: null
+  nullable: true
+  oneof:
+  - type: [integer, string]
+  - type: list
+    schema:
+      type: [integer, string]
+valueSubstitutions:
+  type: dict
+  default: null
+  nullable: true
+autoColumn:
+  type: string
+  default: null
+  nullable: true
+autoRow:
+  type: string
+  default: null
+  nullable: true
+decimalSeparator:
+  type: string
+  default: "."
+fieldSeparator:
+  type: string
+  default: ","
+thousandsSeparator:
+  type: string
+  default: null
+  nullable: true
+header:
+  default: infer
+  oneof:
+  - type: string
+    allowed: [infer]
+  - type: boolean
+  - type: list
+    schema:
+      type: integer
+names:
+  type: list
+  default: null
+  nullable: true
+  schema:
+    type: string
+quoting:
+  type: integer
+  default: 0
+  allowed: [0, 1, 2, 3]
+readCSVArguments:
+  type: dict
+  default: null
+  nullable: true
+skipRows:
+  default: null
+  nullable: true
+  oneof:
+  - type: integer
+  - type: list
+    schema:
+      type: integer
+stack:
+  default: infer
+  oneof:
+  - type: string
+    allowed: [infer]
+  - type: boolean
+trace:
+  type: integer
+  default: 0

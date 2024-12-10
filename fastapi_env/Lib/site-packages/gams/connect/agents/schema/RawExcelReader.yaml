@@ -1,0 +1,42 @@
+file:
+  type: string
+  required: true
+cName:
+  type: string
+  default: c
+columnLabel:
+  type: string
+  default: C
+rName:
+  type: string
+  default: r
+rowLabel:
+  type: string
+  default: R
+sName:
+  type: string
+  default: s
+sheetLabel:
+  type: string
+  default: S
+vfName:
+  type: string
+  default: vf
+vsName:
+  type: string
+  default: vs
+vuName:
+  type: string
+  default: vu
+wName:
+  type: string
+  default: w
+wsName:
+  type: string
+  default: ws
+mergedCells:
+  type: boolean
+  default: false
+trace:
+  type: integer
+  default: 0

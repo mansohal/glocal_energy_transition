@@ -1,0 +1,102 @@
+*
+* gevopt.def
+*
+
+PageWidth integer 0 32767 72 32767 1 1 Output file page width
+PageSize integer 0 0 0 maxint 1 1 Output file page size (=0 no paging)
+subsysFile string 0 "" 1 1 Name of subsystem configuration file
+NameScrDir string 0 "" 1 1 Scratch directory
+NameSysDir string 0 "" 1 1 GAMS system directory where GAMS executables reside
+NameCurDir string 0 "" 1 1 Current directory
+NameWrkDir string 0 "" 1 1 Working directory
+LogOption enumint 0 3 1 1 Log option
+ 0 1 No log output
+ 1 1 Same as 3 - Used to be Log output to screen (console)
+ 2 1 Log output to logfile
+ 3 1 Log output to standard output
+ 4 1 Log output to logfile and standard output
+NameLogFile string 0 "" 1 1 Log file name
+NameCtrFile string 0 "" 1 1 Solver control file name
+NameMatrix string 0 "" 1 1 Solver matrix file name
+NameInstr string 0 "" 1 1 Solver instruction file name
+NameStaFile string 0 "" 1 1 Solver status file name
+licenseFile string 0 "" 1 1 Use alternative license file
+Keep enumint 0 0 1 1 Controls keeping or deletion of process directory and scratch files
+ 0 1 Delete process directory
+ 1 1 Keep process directory
+IDEFlag enumint 0 0 1 1 Integrated Development Environment flag
+ 0 1 Unknown environment
+ 1 1 Runs under GAMS IDE
+IterLim integer 0 2147483647 0 maxint 1 1 Iteration limit of solver
+DomLim integer 0 0 0 maxint 1 1 Domain violation limit solver default
+ResLim double 0 10000000000.00 0 maxdouble 1 1 Wall-clock time limit for solver
+OptCR double 0 1.000000000000000E-04 0 maxdouble 1 1 Relative Optimality criterion solver default
+OptCA double 0 0.00 0 maxdouble 1 1 Absolute Optimality criterion solver default
+SysOut enumint 0 0 1 1 Solver Status file reporting option
+ 0 1 Suppress additional solver generated output
+ 1 1 Include additional solver generated output
+NodeLim integer 0 0 0 maxint 1 1 Node limit in branch and bound tree
+WorkFactor double 0 1.00 0 maxdouble 1 1 Memory Estimate multiplier for some solvers
+WorkSpace double 0 0 0 maxdouble 1 1 Work space for some solvers in MB
+SavePoint enumint 0 0 1 1 Save solver point in GDX file
+ 0 1 No point GDX file is to be saved
+ 1 1 A point GDX file from the last solve is to be saved
+ 2 1 A point GDX file from every solve is to be saved
+ 3 1 A point GDX file from the last solve is to be saved in the scratch directory
+ 4 1 A point GDX file from every solve is to be saved in the scratch directory
+HeapLimit double 0 maxdouble 0 maxdouble 1 1 Maximum Heap size allowed in MB
+NameScrExt string 0 "dat" 1 1 Scratch file extension to be used with temporary files
+Integer1 integer 0 0 minint maxint 1 1 Integer communication cell N
+Integer2 integer 0 0 minint maxint 1 1 Integer communication cell N
+Integer3 integer 0 0 minint maxint 1 1 Integer communication cell N
+Integer4 integer 0 0 minint maxint 1 1 Integer communication cell N
+Integer5 integer 0 0 minint maxint 1 1 Integer communication cell N
+FDDelta double 0 1.000000000000000E-05 1.000000000000000E-09 1.00 1 1 Step size for finite differences
+FDOpt enumint 0 0 1 1 Options for finite differences
+ 0 1 All derivatives analytically, for numerical Hessian use gradient values, scale delta
+ 1 1 All derivatives analytically, for numerical Hessian use function values, scale delta
+ 2 1 Gradient analytically, force Hessian numerically using gradient values, scale delta
+ 3 1 Gradient analytically, force Hessian numerically using function values, scale delta
+ 4 1 Force gradient and Hessian numerically, scale delta
+ 10 1 Same as 0, but no scale of delta
+ 11 1 Same as 1, but no scale of delta
+ 12 1 Same as 2, but no scale of delta
+ 13 1 Same as 3, but no scale of delta
+ 14 1 Same as 4, but no scale of delta
+AlgFileType integer 0 0 0 maxint 1 1 File type of scratch files
+GamsVersion integer 0 999 0 maxint 1 1 GAMS CMEX Version
+GenSolver integer 0 0 0 maxint 1 1 Indicator for generic solver executable
+CurSolver integer 0 0 0 maxint 1 1 Solver id of the last gevcallsolver
+ThreadsRaw integer 0 1 minint maxint 1 1 Number of threads to be used by a solver in raw format
+UseCutOff integer 0 0 0 maxint 1 1 UseCutOff solver default
+UseCheat integer 0 0 0 maxint 1 1 UseCheat solver default
+NameGamsDate string 0 "" 1 1 GAMS Date
+NameGamsTime string 0 "" 1 1 GAMS Time
+License1 string 0 "" 1 1 License line 1
+License2 string 0 "" 1 1 License line 2
+License3 string 0 "" 1 1 License line 3
+License4 string 0 "" 1 1 License line 4
+License5 string 0 "" 1 1 License line 5
+License6 string 0 "" 1 1 License line 6
+License7 string 0 "" 1 1 License line 7
+License8 string 0 "" 1 1 License line 8
+NameParams string 0 "" 1 1 Parameter file name
+NameScenFile string 0 "" 1 1 Scenario file name
+NameExtFFile string 0 "" 1 1 External Function file name
+isDefaultLicense integer 0 1 0 maxint 1 1 Indicator for default license
+isDefaultSubsys integer 0 1 0 maxint 1 1 Indicator for default subsys
+Cheat double 0 0.00 0 maxdouble 1 1 Cheat value, i.e. minimum solution improvement threshold
+CutOff double 0 0.00 0 maxdouble 1 1 Cutoff value for branch and bound
+Real1 double 0 0 mindouble maxdouble 1 1 Real communication cell N
+Real2 double 0 0 mindouble maxdouble 1 1 Real communication cell N
+Real3 double 0 0 mindouble maxdouble 1 1 Real communication cell N
+Real4 double 0 0 mindouble maxdouble 1 1 Real communication cell N
+Real5 double 0 0 mindouble maxdouble 1 1 Real communication cell N
+Reform integer 0 0 0 maxint 1 1 Reformulation level
+TryInt double 0 0 0 maxdouble 1 1 Whether solver should make use of a partial integer-feasible solution
+*
+* Groups
+* <group-ident> group <group-number <help-context> <help-text>
+*
+general group 1 1 General options
+*** End of file

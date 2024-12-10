@@ -1,0 +1,124 @@
+*
+* optconvert.def
+*
+
+All boolean.nv 0 0 1 1 Generates all supported file formats
+AlphaECP string.opt 0 "alpha.ecp" 1 1 Generates AlphaECP input file
+Ampl string.opt 1 "ampl.mod" 1 1 Generates Ampl input file
+AmplNL string.opt 1 "ampl.nl" 1 1 Generates Ampl .nl file
+AmplNLBin boolean 0 0 1 2 Enables binary .nl file
+AmplNlInitPrimal enumint 0 2 1 2 Which initial variable level values to write to .nl file
+ 0 1 Write no values
+ 1 1 Write only nondefault values
+ 2 1 Write all values
+AmplNlInitDual enumint 0 1 1 2 Which initial equation marginal values to write to .nl file
+ 0 1 Write no values
+ 1 1 Write only nondefault values
+ 2 1 Write all values
+AmplNLC string.opt 0 "amplnlc.c" 1 1 Generates Ampl NLC compatible file
+AmplNLCG string.opt 0 "amplnlcg.c" 1 1 Generates GDX compatible Ampl NLC file
+Analyze string.opt 0 "analyze.txt" 1 1 Generates three text files for rows columns and matrix
+AnalyzeS string.opt 0 "analyzes.txt" 1 1 Generates short form of Analyze
+Baron string.opt 0 "gams.bar" 1 1 Generates Baron input file
+CHull string.opt 0 "chull.gms" 1 1 Generates Convex Hull for MINLPs
+ConeReform enumint 0 0 1 2 Reformulation of cone =C= constraints to NLP format
+ 0 1 keep =C= format
+ 1 1 convert conic constraints to NLP format
+CplexLP string.opt 1 "cplex.lp" 1 1 Generates CPLEX LP format input file
+CplexMPS string.opt 1 "cplex.mps" 1 1 Generates CPLEX MPS format input file
+CppAD string.opt 0 "cppadFunc.cpps" 1 1 Generates CppAD evaluation code
+DCprior integer 0 5 0 maxint 0 2 Generates priority list for Double Contraction
+Dict string.opt 1 "dict.txt" 1 1 Generates Convert to GAMS Dictionary
+DictMap string.opt 2 "dictmap.gdx" 1 1 Generates Convert to GAMS Dictionary Map
+Dump string.opt 1 "dump.txt" 0 1 Debug dump routine (default output)
+DumpGDX string.opt 2 "dump.gdx" 1 1 Generates GDX with model data incl. Jacobian and Hessian evaluated at current point
+ECPInfBnd double 0 0 0 maxdouble 0 2 Infinity value to be used on bounds for AlphaECP
+FileList string.opt 0 "files.txt" 1 1 Generates file list of file formats generated
+FixedMPS string.opt 1 "fixed.mps" 1 1 Generates fixed format MPS file
+Gams string.opt 1 "gams.gms" 1 1 Generates GAMS scalar model. This is the default conversion format used.
+GDXNames boolean 0 1 1 2 Enable variable and equation names for \ref CONVERTDumpGDX "DumpGDX"
+GDXUELs boolean 0 1 1 2 Enable UELs for \ref CONVERTDumpGDX "DumpGDX"
+GDXHessian boolean 0 0 1 2 Enable hessian information for \ref CONVERTDumpGDX "DumpGDX"
+GDXQuadratic boolean 0 0 1 2 Enable quadratic information for \ref CONVERTDumpGDX "DumpGDX"
+GmsInsert string.opt 0 "$if NOT '%gams.u1%' == '' $include '%gams.u1%'" 1 2 Line to be inserted before the solve statement
+HeaderTimeStamp enumstr 0 "default" 1 2 Control format of time stamp in header of output file
+ "default" 1 Use the traditional default timestamp
+ "none" 1 Use no timestamp
+Hessian string.opt 0 "hessian.gdx" 1 1 Writes GDX version of current point - Jacobian and Hessian
+Include immediate ReadFile 0 2 Start reading from a new file
+IntervalEval boolean 0 0 1 2 Include interval evaluations in \ref CONVERTDumpGDX "DumpGDX"
+intervalEvalDebug boolean 0 0 1 2 Turn on debug output for the interval evaluations
+Jacobian string.opt 0 "jacobian.gdx" 1 1 Writes GDX version of current point - Jacobian
+JuMP string.opt 1 "jump.jl" 1 1 Generates JuMP scalar model
+Lago string.opt 0 "lago.gms" 1 1 Generates a partial Lago file
+Lgo string.opt 0 "lgomain.for" 1 1 Generates an LGO Fortran file
+LindoMPI string.opt 0 "lindo.mpi" 1 1 Generates Lindo MPI file
+Lingo string.opt 1 "lingo.lng" 1 1 Generates Lingo input file
+LocalSolver string.opt 0 "localsolver.lsp" 1 1 Generates LocalSolver input file
+LSPSol string.opt 0 "lspsol.gms" 1 2 Generates Output function in LocalSolver input file
+Match boolean.nv 0 0 1 2 Force a complete match for all MCP variable/equation pairs
+Memo string.opt 0 "memo.txt" 1 1 Generates a memo file containing model statistics and files created.
+Minopt string.opt 0 "minopt.dat" 1 1 Generates Minopt input file
+NlUgly boolean.nv 0 0 0 2 Generate ugly (unfolded) NL expressions
+ObjVar string.opt 0 "objvar" 1 2 Name of objective variable
+OSiL string.opt 2 "osil.xml" 1 1 Generates Optimization Services instance Language (OSiL) file
+PDCO string.opt 0 "data.dat" 1 1 Generates Mike Saunders PDCO input file
+PermuteEqus integer 0 0 0 maxint 1 2 Random seed for permutation of equations (0: no permutation)
+PermuteVars integer 0 0 0 maxint 1 2 Random seed for permutation of variables (0: no permutation)
+Pyomo string.opt 1 "pyomo.py" 1 1 Generates Pyomo Concrete scalar model
+QExtractAlg enumint 0 0 1 2 quadratic extraction algorithm in GAMS interface
+ 0 1 Automatic
+ 1 1 ThreePass: Uses a three-pass forward / backward / forward AD technique to compute function / gradient / Hessian values and a hybrid scheme for storage.
+ 2 1 DoubleForward: Uses forward-mode AD to compute and store function, gradient, and Hessian values at each node or stack level as required.  The gradients and Hessians are stored in linked lists.
+ 3 1 Concurrent: Uses ThreePass and DoubleForward in parallel. As soon as one finishes, the other one stops.
+Qmaker string.opt 0 "qmaker.gms" 1 1 Test QP stuff
+Reform integer 0 100 0 maxint 1 2 Force reformulations
+SkipNRows boolean 0 0 1 2 Skip constraints of type =N=
+SFS string.opt 0 "sfs.oml" 1 1 Generates Solver Foundation Services OML file
+Terminate boolean.nv 0 0 1 2 Force GAMS to terminate after conversion
+Tester string.opt 0 "" 0 2 Tests new interpreter
+UnitBC string.opt 0 "unitbc.gdx" 1 1 Generates unit benefit and cost
+ViennaDag string.opt 0 "vienna.dag" 1 1 Generates Vienna Dag input file
+Width integer 0 80 40 maxint 1 2 Max line width of output format
+*
+* definedvar section
+*
+defvar  definedvar
+myeolchar EOLCOMM #
+*
+* deprecated section
+*
+gams34 deprecated
+ AlphaECP
+ AmplNLC
+ AmplNLCG
+ Analyze
+ AnalyzeS
+ Baron
+ CHull
+ ConeReform
+ CppAD
+ Hessian
+ intervalEvalDebug
+ Jacobian
+ Lago
+ Lgo
+ LindoMPI
+ LocalSolver
+ LSPSol
+ Match
+ Memo
+ Minopt
+ PDCO
+ Qmaker
+ SFS
+ Terminate
+ UnitBC
+ ViennaDag
+*
+* Groups
+* <group-ident> group <group-number <help-context> <help-text>
+*
+Language group 1 1 Target languages and formats
+Other group 2 1 Other options
+*** End of file

@@ -1,0 +1,27 @@
+<service>
+  <id>glocal_energy_transition</id>
+  <name>Glocal Energy Transition Service</name>
+  <description>This service runs the FastAPI app with ngrok.</description>
+  
+  <!-- Path to the Python executable -->
+  <executable>D:/glocal_energy_transition/fastapi_env/Scripts/python.exe</executable>
+  
+  <!-- Arguments to run the script -->
+  <arguments>run.py</arguments>
+  
+  <!-- Directory where the service will run -->
+  <workingdirectory>D:\glocal_energy_transition</workingdirectory>
+  
+  <!-- Log files for the service -->
+  <logpath>D:\glocal_energy_transition\logs</logpath>
+  
+  <!-- Handles failures by restarting the service -->
+  <onfailure>
+    <action action="restart" delay="10 sec" />
+    <action action="restart" delay="30 sec" />
+    <action action="restart" delay="1 min" />
+  </onfailure>
+  
+  <!-- Timeout for stopping the service gracefully -->
+  <stoptimeout>30 sec</stoptimeout>
+</service>

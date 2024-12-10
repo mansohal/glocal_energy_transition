@@ -1,0 +1,134 @@
+Metadata-Version: 2.1
+Name: gamspy
+Version: 1.3.1
+Summary: Python-based algebraic modeling interface to GAMS
+Author-email: GAMS Development Corporation <support@gams.com>
+License: GAMSpy - General Algebraic Modeling in Python
+        
+        Copyright (c) 2024 GAMS Development Corp. <support@gams.com>
+        Copyright (c) 2024 GAMS Software GmbH <support@gams.com>
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: homepage, https://gams.com/sales/gamspy_facts/
+Project-URL: documentation, https://gamspy.readthedocs.io/en/latest/user/index.html
+Project-URL: repository, https://github.com/GAMS-dev/gamspy
+Project-URL: changelog, https://github.com/GAMS-dev/gamspy/blob/develop/CHANGELOG.md
+Keywords: Optimization,GAMS
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: gamsapi[control,transfer]==48.4.0
+Requires-Dist: gamspy_base==48.4.0
+Requires-Dist: pydantic>=2.0
+Requires-Dist: certifi>=2022.09.14
+Requires-Dist: urllib3>=2.0.7
+Provides-Extra: dev
+Requires-Dist: ruff>=0.5.6; extra == "dev"
+Requires-Dist: pre-commit>=3.5.0; extra == "dev"
+Requires-Dist: mypy>=1.11.1; extra == "dev"
+Provides-Extra: test
+Requires-Dist: coverage[toml]>=7.2.7; extra == "test"
+Requires-Dist: openpyxl>=3.1.2; extra == "test"
+Requires-Dist: cerberus>=1.3.5; extra == "test"
+Requires-Dist: python-dotenv>=1.0.0; extra == "test"
+Requires-Dist: pytest>=8.0.0; extra == "test"
+Provides-Extra: doc
+Requires-Dist: sphinx>=7.1.2; extra == "doc"
+Requires-Dist: numpydoc>=1.5.0; extra == "doc"
+Requires-Dist: nbsphinx>=0.9.3; extra == "doc"
+Requires-Dist: sphinx_copybutton>=0.5.2; extra == "doc"
+Requires-Dist: sphinx-favicon>=1.0.1; extra == "doc"
+Requires-Dist: ipykernel; extra == "doc"
+Requires-Dist: matplotlib>=3.7.3; extra == "doc"
+Requires-Dist: sphinx_design>=0.5.0; extra == "doc"
+Requires-Dist: pydata_sphinx_theme>=0.14.1; extra == "doc"
+Requires-Dist: plotly>=5.22.0; extra == "doc"
+Requires-Dist: kaleido==0.2.1; extra == "doc"
+Requires-Dist: pytest>=8.2.1; extra == "doc"
+Requires-Dist: nbmake>=1.5.3; extra == "doc"
+Requires-Dist: openpyxl>=3.1.2; extra == "doc"
+
+![plot](https://github.com/GAMS-dev/gamspy/blob/develop/docs/_static/gamspy_logo.png?raw=true)
+
+-----------------
+[![PyPI version](https://img.shields.io/pypi/v/gamspy.svg?maxAge=3600)](https://gamspy.readthedocs.io/en/latest/)
+[![Downloads](https://static.pepy.tech/badge/gamspy)](https://pepy.tech/project/gamspy)
+[![Documentation Status](https://readthedocs.org/projects/gamspy/badge/?version=latest)](https://gamspy.readthedocs.io/en/latest/)
+
+# GAMSPy: Algebraic Modeling Interface to GAMS
+
+## Installation
+
+```sh
+pip install gamspy
+```
+
+## What is it?
+
+**gamspy** is a mathematical optimization package that combines the power of the high performance GAMS execution system
+and flexibility of the Python language. It includes all GAMS symbols (Set, Alias, Parameter, Variable, and
+Equation) to compose mathematical models, a math package, and various utility functions.
+
+## Documentation
+The official documentation is hosted on [GAMSPy Readthedocs](https://gamspy.readthedocs.io/en/latest/index.html).
+
+## Design Philosophy
+GAMSPy makes extensive use of set based operations -- the absence of any explicit looping, indexing, etc., in native Python.
+These things are taking place, of course, just “behind the scenes” in optimized, pre-compiled C code.
+
+Set based approach has many advantages:
+
+  - Results in more concise Python code -- avoids inefficient and difficult to read for loops
+  - Closely resembles standard mathematical notation
+  - Easier to read
+  - Fewer lines of code generally means fewer bugs
+
+
+## Main Features
+Here are just a few of the things that **gamspy** does well:
+
+  - Specify model algebra in Python natively
+  - Combines the flexibility of Python programming flow controls and the power of model specification in GAMS
+  - Test a variety of solvers on a model by changing only one line
+
+## Getting Help
+
+For usage questions, the best place to go to is [GAMSPy Documentation](https://gamspy.readthedocs.io/en/latest/index.html).
+General questions and discussions can also take place on the [GAMSPy Discourse Platform](https://forum.gams.com/c/gamspy-help).

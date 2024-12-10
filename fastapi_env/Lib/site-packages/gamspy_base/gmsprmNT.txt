@@ -1,0 +1,10 @@
+******************************************************************
+* GAMS 2.50 Default Parameterfile for Windows NT                 *
+* Gams Development Corp.                                         *
+* Date : 20 Mar, 1998                                            *
+******************************************************************
+* entries required by CMEX, put in by gams.exe:
+* SYSDIR
+* SCRDIR
+* SCRIPTNEXT
+* INPUT

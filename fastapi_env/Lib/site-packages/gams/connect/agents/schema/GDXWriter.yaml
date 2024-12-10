@@ -1,0 +1,32 @@
+file:
+  type: string
+  required: true
+duplicateRecords:
+  type: string
+  default: all
+  allowed: [all, first, last, none]
+trace:
+  type: integer
+  default: 0
+symbols:
+  default: all
+  oneof:
+  - type: string
+    allowed: [all]
+  - type: list
+    schema:
+      type: dict
+      allow_unknown: false
+      schema:
+        name:
+          type: string
+          required: true
+        newName:
+          type: string
+          default: null
+          nullable: true
+        duplicateRecords:
+          type: string
+          default: null
+          allowed: [all, first, last, none]
+          nullable: true

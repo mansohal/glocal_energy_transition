@@ -1,0 +1,44 @@
+file:
+  type: string
+  required: true
+name:
+  type: string
+  required: true
+decimalSeparator:
+  type: string
+  default: "."
+fieldSeparator:
+  type: string
+  default: ","
+header:
+  type: boolean
+  default: true
+quoting:
+  type: integer
+  default: 0
+  allowed: [0, 1, 2, 3]  # QUOTE_MINIMAL (0), QUOTE_ALL (1), QUOTE_NONNUMERIC (2) or QUOTE_NONE (3)
+setHeader:
+  type: string
+  default: null
+  nullable: true
+skipText:
+  type: boolean
+  default: false
+toCSVArguments:
+  type: dict
+  default: null
+  nullable: true
+unstack:
+  default: false
+  oneof:
+  - type: boolean
+  - type: list
+    schema:
+      type: integer
+valueSubstitutions:
+  type: dict
+  default: null
+  nullable: true
+trace:
+  type: integer
+  default: 0

@@ -1,0 +1,18 @@
+2024-12-10 16:15:51,337 DEBUG - Starting WinSW in console mode
+2024-12-10 16:15:54,313 DEBUG - Starting WinSW in console mode
+2024-12-10 16:15:54,365 INFO  - Installing service 'Glocal Energy Transition Service (glocal_energy_transition)'...
+2024-12-10 16:15:54,388 FATAL - The configuration file cound not be loaded. 'action' is missing
+System.IO.InvalidDataException: 'action' is missing
+   at WinSW.XmlServiceConfig.get_FailureActions()
+   at WinSW.Program.<Run>g__Install|5_0(<>c__DisplayClass5_0& )
+   at WinSW.Program.Run(String[] argsArray, IServiceConfig config)
+   at WinSW.Program.Main(String[] args)
+2024-12-10 16:21:25,390 DEBUG - Starting WinSW in console mode
+2024-12-10 16:21:27,445 DEBUG - Starting WinSW in console mode
+2024-12-10 16:21:27,492 INFO  - Installing service 'Glocal Energy Transition Service (glocal_energy_transition)'...
+2024-12-10 16:21:27,498 ERROR - A service with ID 'glocal_energy_transition' already exists.
+2024-12-10 16:21:27,500 FATAL - Failed to install the service. The specified service already exists.
+2024-12-10 16:22:05,431 DEBUG - Starting WinSW in console mode
+2024-12-10 16:22:07,390 DEBUG - Starting WinSW in console mode
+2024-12-10 16:22:07,441 INFO  - Uninstalling service 'Glocal Energy Transition Service (glocal_energy_transition)'...
+2024-12-10 16:22:07,449 INFO  - Service 'Glocal Energy Transition Service (glocal_energy_transition)' was uninstalled successfully.

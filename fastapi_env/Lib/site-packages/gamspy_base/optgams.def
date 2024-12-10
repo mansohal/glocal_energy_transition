@@ -1,0 +1,717 @@
+*
+* optgams.def
+*
+
+LP string 0 "" 1 3 Linear Programming - default solver
+MIP string 0 "" 1 3 Mixed-Integer Programming - default solver
+RMIP string 0 "" 1 3 Relaxed Mixed-Integer Programming - default solver
+NLP string 0 "" 1 3 Non-Linear Programming - default solver
+MCP string 0 "" 1 3 Mixed Complementarity Problems - default solver
+MPEC string 0 "" 1 3 Mathematical Programs with Equilibrium Constraints - default solver
+RMPEC string 0 "" 1 3 Relaxed Mathematical Programs with Equilibrium Constraints - default solver
+CNS string 0 "" 1 3 Constrained Nonlinear Systems - default solver
+DNLP string 0 "" 1 3 Non-Linear Programming with Discontinuous Derivatives - default solver
+RMINLP string 0 "" 1 3 Relaxed Mixed-Integer Non-Linear Programming - default solver
+MINLP string 0 "" 1 3 Mixed-Integer Non-Linear Programming - default solver
+QCP string 0 "" 1 3 Quadratically Constrained Programs - default solver
+MIQCP string 0 "" 1 3 Mixed Integer Quadratically Constrained Programs - default solver
+RMIQCP string 0 "" 1 3 Relaxed Mixed Integer Quadratically Constrained Programs - default solver
+EMP string 0 "" 1 3 Extended Mathematical Programs - default solver
+EolOnly immediate EolFlag 1 1 Single key-value pairs (immediate switch)
+Restart string 0 "" 1 2 Name of a restart file, see \ref UG_SaveRestart
+Input string 0 "" 1 1 Input file
+Output string 0 "" 1 1 Listing file name
+Save string 0 "" 1 2 Creates a work file, see \ref UG_SaveRestart
+Symbol string 0 "" 1 1 Symbol table file
+XSave string 0 "" 1 2 Creates a compressed \ref UG_SaveRestart "work file"
+Expand string 0 "" 1 1 Expanded (include) input file name
+PageWidth integer 0 32767 72 32767 1 1 Output file page width
+PageSize integer 0 0 0 maxint 1 1 Output file page size (=0 no paging)
+PageContr enumint 0 2 1 1 Output file page control option
+ 0 1 No page control, with padding
+ 1 1 FORTRAN style line printer format
+ 2 1 No page control, no padding
+ 3 1 Formfeed character for new page
+Action enumstr 0 "CE" 1 1 GAMS processing request
+ "R" 1 Restart After Solve
+ "C" 1 CompileOnly
+ "E" 1 ExecuteOnly
+ "CE" 1 Compile and Execute
+ "G" 0 Glue Code Generation
+ "GT" 1 Trace Report
+SubSys string 0 "" 1 3 Name of subsystem configuration file
+ErrNam string 0 "" 1 1 Name of error message file
+ScrDir string 0 "" 1 1 Scratch directory
+ScrNam string 0 "" 1 1 Work file names stem
+SysDir string 0 "" 1 1 GAMS system directory where GAMS executables reside
+CurDir string 0 "" 1 1 Current directory
+WorkDir string 0 "" 1 1 Working directory
+PutDir string 0 "" 1 1 Put file directory
+GridDir string 0 "" 1 1 Grid file directory
+ScriptNext string 0 "" 0 3 Script mailbox file name (GAMSNEXT)
+ScriptExit string 0 "" 1 3 Program or script to be executed at the end of a GAMS run
+ScriptFrst string 0 "" 1 3 First line to be written to GAMSNEXT file.
+LogLine enumint 0 2 1 1 Amount of line tracing to the log file
+ 0 1 No line tracing
+ 1 1 Minimum line tracing
+ 2 1 Automatic and visually pleasing
+LogOption enumint 0 3 1 1 Log option
+ 0 1 No log output
+ 1 0 Same as 3 - Used to be Log output to screen (console)
+ 2 1 Log output to logfile
+ 3 1 Log output to standard output
+ 4 1 Log output to logfile and standard output
+LogFile string 0 "" 1 1 Log file name
+Trace string 0 "" 1 1 Trace file name
+AppendOut enumint 0 0 1 1 Output file append option
+ 0 1 Reset listing file
+ 1 1 Append to listing file
+AppendLog enumint 0 0 1 1 Log file append option
+ 0 1 Reset log file
+ 1 1 Append to logfile
+StepSum enumint 0 0 1 1 Summary of computing resources used by job steps
+ 0 1 No step summary
+ 1 1 Step summary printed
+MultiPass enumint 0 0 1 1 Multipass facility
+ 0 1 Standard compilation
+ 1 1 Check-out compilation
+ 2 1 As 1, and skip $call and ignore missing file errors with $include and $gdxin as well as unknown dimension errors with empty data statements
+Suppress enumint 0 0 1 1 Compiler listing option
+ 0 1 Standard compiler listing
+ 1 1 Suppress compiler listing
+DFormat enumint 0 0 1 1 Date format
+ 0 1 Date as mm/dd/yy
+ 1 1 Date as dd.mm.yy
+ 2 1 Date as yy-mm-dy
+TFormat enumint 0 0 1 1 Time format
+ 0 1 Time as hh:mm:ss
+ 1 1 Time as hh.mm.ss
+TabIn integer 0 8 0 maxint 1 1 Tab spacing
+ 0 Tabs are not allowed
+ 1 Tabs are replaced by blanks
+ n Tabs are 1, n+1, 2n+1,..  (default: n=8)
+CtrlZ integer 0 0 0 maxint 1 4 Enable reading control Z
+CtrlM integer 0 0 0 maxint 1 4 Enable flexible line ending
+SolverCntr string 0 "" 1 3 Solver control file name
+SolverMatr string 0 "" 1 3 Solver matrix file name
+SolverInst string 0 "" 1 3 Solver instruction file name
+SolverStat string 0 "" 1 3 Solver status file name
+SolverSolu string 0 "" 1 3 Solver solution file name
+SolverDict string 0 "" 1 3 Solver dictionary file name
+PoolUse integer 0 0 0 maxint 1 4 Manage memory pools
+PoolFree1 integer 0 0 0 maxint 1 4 Manage memory pools N
+PoolFree2 integer 0 0 0 maxint 1 4 Manage memory pools N
+PoolFree3 integer 0 0 0 maxint 1 4 Manage memory pools N
+IntVarUp enumint 0 0 1 3 Set mode for default upper bounds on integer variables
+ 0 1 Set default upper bound for integer variables to +INF
+ 1 1 Pass a value of 100 instead of +INF to the solver as upper bound for integer variables
+ 2 1 Same as 0 but writes a message to the log if the level of an integer variable is greater than 100
+ 3 1 Same as 2 but issues an execution error if the level of an integer variable is greater than 100
+PoolFree5 integer 0 0 0 maxint 1 4 Manage memory pools N
+PoolFree6 integer 0 0 0 maxint 1 4 Manage memory pools N
+PoolFree7 integer 0 0 0 maxint 1 4 Manage memory pools N
+CodeX integer 0 0 0 maxint 1 4 Controls the allocation of executable code
+Case enumint 0 0 1 1 Output case option for LST file
+ 0 1 Write listing file in mixed case
+ 1 1 Write listing file in upper case only
+G205 enumint 0 0 1 1 Use GAMS version 2.05 syntax
+ 0 1 Use only latest syntax
+ 1 1 Allow version 2.05 syntax only
+ 2 1 Allow version 2.25 syntax only
+License string 0 "" 1 1 Use alternative license file
+TopMargin integer 0 0 0 maxint 1 4 Output file page top margin
+LeftMargin integer 0 0 0 maxint 1 4 Output file page left margin
+BotMargin integer 0 0 0 maxint 1 4 Output file page bottom margin, lines added at the end of a page
+DumpParms enumint 0 0 1 1 GAMS parameter logging
+ 0 1 No logging
+ 1 1 Lists accepted/set parameters
+ 2 1 Log of file operations plus list of accepted/set parameters
+NoCr integer 0 0 0 maxint 0 1 Suppress the copyright message
+Profile integer 0 0 0 maxint 1 1 Execution profiling
+ 0 No profiling
+ 1 Minimum profiling
+ n Profiling depth for nested control structures
+InputDir1 string 0 "" 1 1 Input file directory number N
+InputDir2 string 0 "" 1 1 Input file directory number N
+InputDir3 string 0 "" 1 1 Input file directory number N
+InputDir4 string 0 "" 1 1 Input file directory number N
+InputDir5 string 0 "" 1 1 Input file directory number N
+InputDir6 string 0 "" 1 1 Input file directory number N
+InputDir7 string 0 "" 1 1 Input file directory number N
+InputDir8 string 0 "" 1 1 Input file directory number N
+InputDir9 string 0 "" 1 1 Input file directory number N
+InputDir10 string 0 "" 1 1 Input file directory number N
+InputDir11 string 0 "" 1 1 Input file directory number N
+InputDir12 string 0 "" 1 1 Input file directory number N
+InputDir13 string 0 "" 1 1 Input file directory number N
+InputDir14 string 0 "" 1 1 Input file directory number N
+InputDir15 string 0 "" 1 1 Input file directory number N
+InputDir16 string 0 "" 1 1 Input file directory number N
+InputDir17 string 0 "" 1 1 Input file directory number N
+InputDir18 string 0 "" 1 1 Input file directory number N
+InputDir19 string 0 "" 1 1 Input file directory number N
+InputDir20 string 0 "" 1 1 Input file directory number N
+InputDir21 string 0 "" 1 1 Input file directory number N
+InputDir22 string 0 "" 1 1 Input file directory number N
+InputDir23 string 0 "" 1 1 Input file directory number N
+InputDir24 string 0 "" 1 1 Input file directory number N
+InputDir25 string 0 "" 1 1 Input file directory number N
+InputDir26 string 0 "" 1 1 Input file directory number N
+InputDir27 string 0 "" 1 1 Input file directory number N
+InputDir28 string 0 "" 1 1 Input file directory number N
+InputDir29 string 0 "" 1 1 Input file directory number N
+InputDir30 string 0 "" 1 1 Input file directory number N
+InputDir31 string 0 "" 1 1 Input file directory number N
+InputDir32 string 0 "" 1 1 Input file directory number N
+InputDir33 string 0 "" 1 1 Input file directory number N
+InputDir34 string 0 "" 1 1 Input file directory number N
+InputDir35 string 0 "" 1 1 Input file directory number N
+InputDir36 string 0 "" 1 1 Input file directory number N
+InputDir37 string 0 "" 1 1 Input file directory number N
+InputDir38 string 0 "" 1 1 Input file directory number N
+InputDir39 string 0 "" 1 1 Input file directory number N
+InputDir40 string 0 "" 1 1 Input file directory number N
+LibIncDir string 0 "" 1 1 LibInclude directory
+SysIncDir string 0 "" 1 1 SysInclude directory
+User1 string 0 "" 1 1 User string N
+User2 string 0 "" 1 1 User string N
+User3 string 0 "" 1 1 User string N
+User4 string 0 "" 1 1 User string N
+User5 string 0 "" 1 1 User string N
+ForceWork enumint 0 0 1 1 Force GAMS to process a save file created with a newer GAMS version or with execution errors
+ 0 1 No translation
+ 1 1 Try translation
+CErr integer 0 0 0 maxint 1 1 Compile time error limit
+ 0 No error limit (default)
+ n Stop after n errors
+FErr string 0 "" 1 1 Alternative error message file
+OptFile integer 0 0 0 maxint 1 3 Default option file
+ 0 No option file will be used
+ 1 The option file solvername.opt will be used
+ 2 The option file solvername.op2 will be used
+ 3 The option file solvername.op3 will be used
+ 15 The option file solvername.o15 will be used
+ 222 The option file solvername.222 will be used
+ 1234 The option file solvername.1234 will be used
+FSave enumint 0 0 1 2 Creates a forced \ref UG_SaveRestart "work file", i.e., the file is saved even if execution errors or other errors occured
+ 0 1 Workfile only written to file specified by SAVE if no errors occur
+ 1 1 Workfile always written to file specified by SAVE or if SAVE is not present to a name made up by GAMS
+NlCon integer 0 0 0 maxint 1 4 Nonlinear instructions search length
+DumpOpt enumint 0 0 1 1 Writes preprocessed input to the file input.dmp
+ 0 1 No dumpfile
+ 1 1 Extract referenced data from the restart file using original set element names
+ 2 1 Extract referenced data from the restart file using new set element names
+ 3 1 Extract referenced data from the restart file using new set element names and drop symbol text
+ 4 1 Extract referenced symbol declarations from the restart file
+ 10 0 (Same as 11 and therefore hidden)
+ 11 1 Write processed input file without comments
+ 12 0 (Same as 11 and therefore hidden)
+ 19 0 (Same as 21 and therefore hidden)
+ 20 0 (Same as 21 and therefore hidden)
+ 21 1 Write processed input file with all comments
+ 22 1 Write processed input with all comments into a separate dump file for each block
+ErrMsg enumint 0 1 1 1 Placing of compilation error messages
+ 0 1 Place error messages at the end of compiler listing
+ 1 1 Place error messages immediately following the line with the error
+ 2 1 Suppress error messages
+Opt integer 0 0 0 maxint 0 1 Fold constant $ expressions
+RelPath enumint 0 0 0 1 Processing of relative path
+ 0 1 Expand relative path
+ 1 1 Do not expand relative path
+GLanguage integer 0 0 0 maxint 1 4
+GFinclude integer 0 0 0 maxint 1 4
+UnitType string 0 "" 1 4
+GFImplicit integer 0 0 0 maxint 1 4
+GFExt integer 0 0 0 maxint 1 4
+Error immediate Message 1 1 Force a compilation error with message
+StringChk enumint 0 0 1 1 String substitution options
+ 0 1 No substitution if symbol undefined and no error
+ 1 1 Error if symbol undefined
+ 2 1 Remove entire symbol reference if undefined and no error
+Reference string 0 "" 1 1 Symbol reference file
+OptDir string 0 "" 1 3 Option file directory
+MaxExecError integer 0 0 0 maxint 1 1 Execution time error limit
+ 0 No errors allowed limit
+ n Max number allowed
+ParmFile immediate ReadFile 1 1 Command Line Parameter include file
+ErrorLog integer 0 2147483647 0 maxint 1 1 Max error message lines written to the log for each error
+ 0 No error messages to LOG file
+ n Number of lines for each error that will be written to LOG file
+LimRow integer 0 3 0 maxint 1 3 Maximum number of rows listed in one equation block
+LimCol integer 0 3 0 maxint 1 3 Maximum number of columns listed in one variable block
+CharSet enumint 0 1 1 1 Character set flag
+ 0 1 Use limited GAMS characters set
+ 1 1 Accept any character in comments and text items (foreign language characters)
+Keep enumint 0 0 1 1 Controls keeping or deletion of process directory and scratch files
+ 0 1 Delete process directory
+ 1 1 Keep process directory
+IDE enumint 0 0 1 1 Integrated Development Environment flag
+ 0 1 Unknown environment
+ 1 1 Runs under GAMS IDE
+TraceOpt enumint 0 0 1 1 Trace file format option
+ 0 1 Solver and GAMS step trace
+ 1 1 Solver and GAMS exit trace
+ 2 1 Solver trace only
+ 3 1 Solver trace only in format used for GAMS performance world
+ 4 0 Trace file format supporting NLPEC
+ 5 1 Gams exit trace with all available trace fields
+GDX string 0 "" 1 1 GAMS data exchange file name
+IterLim integer 0 2147483647 0 maxint 1 3 Iteration limit of solver
+DomLim integer 0 0 0 maxint 1 3 Domain violation limit solver default
+ResLim double 0 10000000000.00 0 maxdouble 1 3 Wall-clock time limit for solver
+OptCR double 0 1.000000000000000E-04 0 maxdouble 1 3 Relative Optimality criterion solver default
+OptCA double 0 0.00 0 maxdouble 1 3 Absolute Optimality criterion solver default
+SysOut enumint 0 0 1 3 Solver Status file reporting option
+ 0 1 Suppress additional solver generated output
+ 1 1 Include additional solver generated output
+SolPrint enumint 0 1 1 3 Solution report print option
+ 0 1 Remove solution listings following solves
+ 1 1 Include solution listings following solves
+ 2 1 Suppress all solution information
+Bratio double 0 0.25 0 1.00 1 3 Basis detection threshold
+HoldFixed enumint 0 0 1 3 Treat fixed variables as constants
+ 0 1 Fixed variables are not treated as constants
+ 1 1 Fixed variables are treated as constants
+NodLim integer 0 0 0 maxint 1 3 Node limit in branch and bound tree
+WorkFactor double 0 1.00 0 maxdouble 1 3 Memory Estimate multiplier for some solvers
+WorkSpace double 0 0 0 maxdouble 1 3 Work space for some solvers in MB
+ForLim integer 0 maxint 0 maxint 1 1 GAMS looping limit
+Seed integer 0 3141 0 maxint 1 1 Random number seed
+On115 enumint 0 0 1 1 Generate errors for unknown unique element in an equation
+ 0 1 No error messages
+ 1 1 Issue error messages
+ExecMode enumint 0 0 1 1 Limits on external programs that are allowed to be executed
+ 0 1 Everything allowed
+ 1 1 Interactive shells in $call and execute commands are prohibited
+ 2 1 Embedded Code and all $call and execute commands are prohibited
+ 3 1 $echo or put commands can only write to directories in or below the working or scratchdir
+ 4 1 $echo and put commands are not allowed
+InteractiveSolver enumint 0 0 1 1 Allow solver to interact via command line input
+ 0 1 Interaction with solvelink 0 is not supported
+ 1 1 Interaction with solvelink 0 is supported
+PLicense string 0 "" 1 1 Privacy license file name
+JobTrace string 0 "" 1 1 Job trace string to be written to the trace file at the end of a GAMS job
+Warnings integer 0 maxint 0 maxint 1 1 Number of warnings permitted before a run terminates
+TraceLevel integer 0 0 0 maxint 1 1 Modelstat/Solvestat threshold used in conjunction with action=GT
+SetType integer 0 0 0 maxint 1 4 Used to set the type of --keys
+Timer integer 0 0 0 maxint 1 1 Instruction timer threshold in milli seconds
+ 0 Interpreted as +inf, no details echoed
+ n Echo all details about internal GAMS instructions that took more than n milli seconds to the log
+FileCase enumint 0 0 1 1 Casing of file names and paths (put, gdx, ref, $include, etc.)
+ 0 1 Causes GAMS to use default casing
+ 1 1 Causes GAMS to upper case file names including path of the file
+ 2 1 Causes GAMS to lower case file names including path of the file
+ 3 1 Causes GAMS to upper case file names only (leave the path alone)
+ 4 1 Causes GAMS to lower case file names only (leave the path alone)
+SavePoint enumint 0 0 1 3 Save solver point in GDX file
+ 0 1 No point GDX file is to be saved
+ 1 1 A point GDX file from the last solve is to be saved
+ 2 1 A point GDX file from every solve is to be saved
+ 3 1 A point GDX file from the last solve is to be saved in the scratch directory
+ 4 1 A point GDX file from every solve is to be saved in the scratch directory
+SolveLink enumint 0 2 1 3 Solver link option
+ 0 1 Model instance and entire GAMS state saved to scratch directory, GAMS exits (and vacates memory), and the solver script is called. After the solver terminates, GAMS restarts from the saved state and continues to executing
+ 1 1 Model instance saved to scratch directory, the solver is called from a shell while GAMS remains open
+ 2 1 Model instance saved to scratch directory, the solver is called with a spawn (if possible) or a shell (if spawn is not possible) while GAMS remains open - If this is not supported by the selected solver, it gets reset to `1` automatically
+ 3 1 Model instance saved to scratch directory, the solver starts the solution and GAMS continues
+ 4 1 Model instance saved to scratch directory, the solver starts the solution and GAMS waits for the solver to come back but uses same submission process as 3 (test mode)
+ 5 1 The model instance is passed to the solver in-memory - If this is not supported by the selected solver, it gets reset to `2` automatically
+ 6 1 The model instance is passed to the solver in-memory, the solver starts the solution and GAMS continues
+ 7 1 The model instance is passed to the solver in-memory, the solver starts the solution and GAMS waits for the solver to come back but uses same submission process as 6 (test mode)
+Sys10 enumint 0 0 1 1 Changes rpower to ipower when the exponent is constant and within 1e-12 of an integer
+ 0 1 Disable conversion
+ 1 1 Enable conversion
+Sys11 enumint 0 0 1 1 Dynamic resorting if indices in assignment/data statements are not in natural order
+ 0 1 Automatic optimization/restructuring of data
+ 1 1 No optimization
+ 2 1 Always optimize/restructure
+Sys12 integer 0 0 0 1 1 1 Pass model with generation errors to solver
+ZeroRes double 0 0.00 0 maxdouble 1 1 The results of certain operations will be set to zero if abs(result) LE ZeroRes
+ZeroResRep enumint 0 0 1 1 Report underflow as a warning when abs(results) LE ZeroRes and result set to zero
+ 0 1 No warning when a rounding occurs because of ZeroRes
+ 1 1 Issue warnings whenever a rounding occurs because of ZeroRes
+HeapLimit double 0 maxdouble 0 maxdouble 1 1 Maximum Heap size allowed in MB
+ScrExt string 0 "dat" 1 1 Scratch file extension to be used with temporary files
+ProcDir string 0 "" 1 1 Process Directory
+gdxCompress enumint 0 0 1 1 Compression of generated GDX file
+ 0 1 Do not compress GDX files
+ 1 1 Compress GDX files
+gdxConvert enumstr 0 "v7" 1 1 Version of GDX files generated (for backward compatibility)
+ "v5" 1 Version 5 GDX file, does not support compression
+ "v6" 1 Version 6 GDX file
+ "v7" 1 Version 7 GDX file
+AppendExpand enumint 0 1 1 1 Expand file append option
+ 0 1 Reset expand file
+ 1 1 Append to expand file
+ETLim double 0 maxdouble 0 maxdouble 1 1 Elapsed time limit in seconds
+ProfileTol double 0 0.00 0 maxdouble 1 1 Minimum time a statement must use to appear in profile generated output
+ProfileFile string 0 "" 1 1 Write profile information to this file
+MaxProcDir integer 0 700 0 maxint 1 1 Maximum number of 225* process directories
+Integer1 integer 0 0 minint maxint 1 3 Integer communication cell N
+Integer2 integer 0 0 minint maxint 1 3 Integer communication cell N
+Integer3 integer 0 0 minint maxint 1 3 Integer communication cell N
+Integer4 integer 0 0 minint maxint 1 3 Integer communication cell N
+Integer5 integer 0 0 minint maxint 1 3 Integer communication cell N
+GridScript string 0 "gmsgrid" 1 1 Grid submission script
+Threads integer 0 0 minint maxint 1 3 Number of processors to be used by a solver
+ 0 Solver decides on number of processors to use
+ n Use n processors
+ minus_n Number of processors to leave free for other tasks
+UseDLL integer 0 0 0 maxint 0 4 Use Cmex library instead of executable
+Debug integer 0 0 0 maxint 0 4 Run GAMS in debugging mode
+PID2Error integer 0 0 0 maxint 0 1 Send GAMS pid to standard error stream
+NoNewVarEqu enumint 0 0 1 1 Triggers a compilation error when new equations or variable symbols are introduced
+ 0 1 AllowNewVarEqu
+ 1 1 DoNotAllowNewVarEqu
+ForceOptFile integer 0 0 0 maxint 1 3 Overwrites other option file section mechanism
+SymPrefix string 0 "" 1 2 Prefix all symbols encountered during compilation by the specified string in work file
+ServerRun integer 0 0 0 maxint 0 1 Run on a server with redirected log (experimental)
+gdxUels enumstr 0 "squeezed" 1 1 Unload labels or UELs to GDX either squeezed or full
+ "Squeezed" 1 Write only the UELs to Universe, that are used by the exported symbols
+ "Full" 1 Write all UELs to Universe
+DumpParmsLogPrefix string 0 "***" 1 1 Prefix of lines triggered by DumpParms>1
+strictSingleton enumint 0 1 1 1 Error if assignment to singleton set has multiple elements
+ 0 1 Take first record if assignment to singleton set has multiple elements
+ 1 1 Error if assignment to singleton set has multiple elements
+SaveObfuscate string 0 "" 1 2 Creates an obfuscated work file, see \ref UG_SecureWorkFiles_ObfuscatedWorkFiles
+XSaveObfuscate string 0 "" 1 2 Creates a compressed \ref UG_SecureWorkFiles_ObfuscatedWorkFiles "obfuscated work file"
+RestartNamed string 0 "" 1 2 Name of another matching restart file, see \ref UG_SecureWorkFiles_ObfuscatedWorkFiles
+Sys14 integer 0 0 0 1 0 1 Write workfile without timing and heap max information
+FDDelta double 0 1.000000000000000E-05 1.000000000000000E-09 1.00 1 1 Step size for finite differences
+FDOpt enumint 0 0 1 1 Options for finite differences
+ 0 1 All derivatives analytically, for numerical Hessian use gradient values, scale delta
+ 1 1 All derivatives analytically, for numerical Hessian use function values, scale delta
+ 2 1 Gradient analytically, force Hessian numerically using gradient values, scale delta
+ 3 1 Gradient analytically, force Hessian numerically using function values, scale delta
+ 4 1 Force gradient and Hessian numerically, scale delta
+ 10 1 Same as 0, but no scale of delta
+ 11 1 Same as 1, but no scale of delta
+ 12 1 Same as 2, but no scale of delta
+ 13 1 Same as 3, but no scale of delta
+ 14 1 Same as 4, but no scale of delta
+Solver string 0 "" 1 3 Default solver for all model types that the solver is capable to process
+DocFile string 0 "" 1 1 Filename stem for documentation files
+SparseRun enumstr 0 "on" 0 1 Switch between sparse and dense execution
+ "off" 1 Execute dense
+ "on" 1 Execute sparse, if possible
+Sys15 integer 0 0 0 maxint 1 1 Automatic switching of data structures used in search records
+ 0 Automatic switching to dense data structures
+ 1 No switching
+ 2 Always switch
+ 1x Print additional information in lst file
+Sys16 integer 0 0 0 1 1 1 Disable search record memory (aka execute this as pre-GAMS 24.5)
+Sys17 integer 0 0 0 1 1 1 Disable sparsity trees growing with permutation (aka execute this as pre-GAMS 24.5)
+PrefixLoadPath enumint 0 0 1 1 Prepend GAMS system directory to library load path
+ 0 1 Do not set GAMS system directory at beginning of library load path
+ 1 1 Set GAMS system directory at beginning of library load path
+ThreadsAsync integer 0 -1 minint maxint 1 1 Limit on number of threads to be used for asynchronous solves (solveLink=6)
+ 0 Use number of available processors
+ n Use n threads
+ minus_n Number of processors to leave free for other tasks
+MCPRHoldfx integer 0 0 0 1 1 1 Print list of rows that are perpendicular to variables removed due to the holdfixed setting
+AsyncSolLst enumint 0 0 1 1 Print solution listing when asynchronous solve (Grid or Threads) is used
+ 0 1 Do not print solution listing into lst file for asynchronous solves
+ 1 1 Print solution listing into lst file for asynchronous solves
+FileStem string 0 "" 1 1 Sets the file stem for output files which use the input file name as stem by default
+ProcDirPath string 0 "" 1 1 Directory to create process directory in
+PySetup enumint 0 1 1 4 GAMS/Python Setup
+ 0 1 Rely on user setup of Python
+ 1 1 Use Python installation provided in GAMS system directory
+PyMultInst enumint 0 0 1 4 GAMS/Python Multiple Instance Interpreter
+ 0 1 Use a single-session Python interpreter
+ 1 1 Use a multi-session Python interpreter
+FileStemApFromEnv string 0 "" 1 1 Append a string read from an environment variable to the "FileStem"
+ShowOSMemory enumint 0 0 1 1 Show the memory usage reported by the Operating System instead of the internal counting
+ 0 1 Show memory reported by internal accounting
+ 1 1 Show resident set size reported by operating system
+ 2 1 Show virtual set size reported by operating system
+LstTitleLeftAligned enumint 0 1 1 1 Write title of LST file all left aligned
+ 0 1 Split LST title into left and right aligned part
+ 1 1 Write LST title completely left aligned
+FreeEmbeddedPython enumint 0 1 0 1 Free external resources at the end of each embedded Python code blocks
+ 0 1 Keep resources to reuse them potentially
+ 1 1 Free resources
+CaptureModelInstance enumint 0 0 1 1 Switch to capture all model instances within a run
+ 0 1 Do not capture model instances
+ 1 1 Capture model instances
+IDCJSON string 0 "" 1 1 Specify JSON file name to verify data contract
+IDCGenerateJSON string 0 "" 1 1 Specify JSON file name of data contract
+IDCGenerateGDX string 0 "" 1 1 Specify GDX file name of input and output side of data contract
+IDCGenerateGDXInput string 0 "" 1 1 Specify GDX file name of input side of data contract
+IDCGenerateGDXOutput string 0 "" 1 1 Specify GDX file name of output side of data contract
+IDCGDXInput string 0 "" 1 1 GDX file name with data for implicit input
+IDCGDXOutput string 0 "" 1 1 GDX file name for data for implicit output
+CheckErrorLevel enumint 0 0 1 1 Check errorLevel automatically after executing external program
+ 0 1 Do not check errorLevel automatically after execution of external program
+ 1 1 Check errorLevel automatically after execution of external program
+IDCProtect enumint 0 1 1 1 Flag to control assignment protection of external input symbols
+ 0 1 Allow to change external input symbols at execution time
+ 1 1 Protect external input symbols from being changed at execution time
+EncryptKey string 0 "" 1 1 Key to encrypt a text file using $encrypt
+DecryptKey string 0 "" 1 1 Key to decrypt a text file that was encrypted via $encrypt
+Sys18 enumint 0 0 1 1 Use backward compatible (i.e. pre-GAMS 31) scheme for reading floating-point numbers
+ 0 1 Use modern scheme for reading floating-point numbers
+ 1 1 Use backward compatible (i.e. pre-GAMS 31) scheme for reading floating-point numbers
+SuffixDLVars enumstr 0 "off" 1 1 Switch default for "$on/offSuffixDLVars"
+ "off" 1 Activate $offSuffixDLVars
+ "on" 1 Activate $onSuffixDLVars
+Digit enumstr 0 "off" 1 1 Switch default for "$on/offDigit"
+ "off" 1 Activate $offDigit
+ "on" 1 Activate $onDigit
+Empty enumstr 0 "on" 1 1 Switch default for "$on/offEmpty"
+ "off" 1 Activate $offEmpty
+ "on" 1 Activate $onEmpty
+EolCom string 0 "off" 1 1 Switch default for "$on/offEolCom" and "$eolCom"
+Filtered enumstr 0 "on" 1 1 Switch between filtered and domain-checked read from GDX
+ "off" 1 Load domain checked
+ "on" 1 Load filtered
+InlineCom string 0 "off" 1 1 Switch default for "$on/offInline" and "$inlineCom"
+Listing enumstr 0 "on" 1 1 Switch default for "$on/offListing"
+ "off" 1 Activate $offListing
+ "on" 1 Activate $onListing
+PutND integer 0 2 0 10 1 1 Number of decimals for put files
+PutNR enumint 0 1 1 1 Numeric round format for put files
+ 0 1 Item is displayed in F or E format
+ 1 1 Item is rounded to fit given width and decimals
+ 2 1 Item is displayed in scientific notation
+ 3 1 Item is rounded to fit given width
+ 4 1 Item is displayed in F or E format ignoring given decimals
+PutPS integer 0 58 1 130 1 1 Page size for put files
+PutPW integer 0 32767 1 32767 1 1 Page width for put files
+PreviousWork enumint 0 0 1 1 Indicator for writing workfile with previous workfile version
+ 0 1 Write workfile using the current version
+ 1 1 Write workfile using the previous workfile version
+SqaCmex enumstr 0 "off" 0 1 Compare model runs of a trusted GAMS version against runs with a development version
+ "ref" 1 Create reference solutions
+ "off" 1 No special SQA run
+ "Sqa" 1 Compare against reference run
+Sys19 integer 0 0 0 1 1 1 Disable permutation on Column Generation (aka execute this as pre-GAMS 36)
+HoldFixedAsync enumint 0 0 1 3 Allow HoldFixed for models solved asynchronously as well
+ 0 1 Ignore HoldFixed setting for async solves
+ 1 1 Allow HoldFixed for async solves
+MaxGenericFiles integer 0 20 0 maxint 1 1 Maximum number of generic file names tried at execution time file creation
+EpsToZero enumstr 0 "off" 1 1 Treat eps as zero when unloading to GDX
+ "off" 1 Treat Eps as Eps
+ "on" 1 Treat Eps as Zero
+DumpOptGDX string 0 "" 1 1 Defines a GDX file name stem created when using DumpOpt
+ReferenceLineNo enumstr 0 "actual" 1 1 Controls the line numbers written to a reference file
+ "actual" 1 Actual line number of symbol reference
+ "start" 1 Line number where the statement with the reference starts
+ConnectIn string 0 "" 1 1 Specify YAML Connect script file processed at start of GAMS
+ConnectOut string 0 "" 1 1 Specify YAML Connect script file processed at end of GAMS
+ECImplicitLoad enumstr 0 "on" 1 1 Allow implicit loading of symbols from embedded code or not
+ "off" 1 Do not allow implicit loading from embedded code
+ "on" 1 Allow implicit loading from embedded code
+ProcTreeMemMonitor enumint 0 0 1 1 Monitor the memory used by the GAMS process tree
+ 0 1 Do not monitor memory usage for the GAMS process tree
+ 1 1 Start a thread to monitor memory usage for the GAMS process tree
+ProcTreeMemTicks integer 0 2000 100 maxint 1 1 Set wait interval between memory monitor checks: ticks = milliseconds
+SolveOpt enumint 0 1 1 5 Multiple solve management
+ 0 1 The solution information for all equations appearing in the model is completely replaced by the new model results; variables are only replaced if they appear in the final model
+ 1 1 The solution information for all equations and variables is merged into the existing solution information
+ 2 1 The solution information for all equations appearing in the model is completely replaced; in addition, variables appearing in the symbolic equations but removed by conditionals will be removed
+Multi string 0 "off" 1 1 Switch default for "$on/offMulti[R]"
+CompilerPreview enumint 0 0 1 1 Test current inputs with upcoming version of GAMS compiler and show problems in save file (see \ref UG_SaveRestart)
+ 0 1 only use current (default) reference compiler
+ 1 1 compile input with both compilers (current and upcoming) sequentially and show and abort on save file mismatch
+ 2 1 compile input with both compilers (current and upcoming) sequentially and show but ignore save file mismatch
+ 3 1 compile input with both compilers (current and upcoming) in parallel and show and abort on save file mismatch
+ 4 1 only use upcoming <i>"new"</i> compiler
+DebugPort integer 0 0 0 65535 0 1 Defines a port for socket communication with GAMS Studio
+gdxSymbols enumstr 0 "all" 1 1 Select symbols that get exported when command line parameter \ref GAMSAOgdx "GDX" is set
+ "all" 1 Write all symbols
+ "newOrChanged" 1 Write only symbols that are new or got modified during compile or execution time
+ "assigned" 1 Write only symbols that got modified during execution time
+GP_SolveLine string 0 "" 0 1 String replacement of solve line number
+ImplicitAssign enumstr 0 "off" 1 1 Switch default for "$on/offImplicitAssign"
+ "off" 1 Activate $offImplicitAssign
+ "on" 1 Activate $onImplicitAssign
+IncrementalMode integer 0 0 0 maxint 0 1 Run GAMSCMEX in a mode that runs small models on top of each other without terminating.
+MIIMode enumstr 0 "off" 1 1 Model Instance Mode
+ "off" 1 Default behavior
+ "singleMI" 1 Setup to inspect a single model instance
+ "multiMI" 1 Setup to inspect multiple model instances from one model
+NetLicense string 0 "" 0 1 Use instantiated network license
+Replace enumstr 0 "on" 1 1 Switch between merge and replace when reading from GDX into non-empty symbol
+ "off" 1 Merge into existing data when loading
+ "on" 1 Replace existing data when loading
+SuffixAlgebraVars enumstr 0 "on" 1 1 Switch default for "$on/offSuffixAlgebraVars"
+ "off" 1 Activate $offSuffixAlgebraVars
+ "on" 1 Activate $onSuffixAlgebraVars
+writeOutput enumint 0 1 1 1 Switch to write output file
+ 0 1 Suppress output file creation
+ 1 1 Write output file
+*
+* multi list section
+*
+InputDir multilist -1 1 1 Input file directories (searched at compile time)
+    InputDir1 InputDir2 InputDir3 InputDir4 InputDir5 InputDir6 InputDir7 InputDir8 InputDir9 InputDir10 InputDir11 InputDir12 InputDir13 InputDir14 InputDir15 InputDir16 InputDir17 InputDir18 InputDir19 InputDir20 InputDir21 InputDir22 InputDir23
+    InputDir24 InputDir25 InputDir26 InputDir27 InputDir28 InputDir29 InputDir30 InputDir31 InputDir32 InputDir33 InputDir34 InputDir35 InputDir36 InputDir37 InputDir38 InputDir39 InputDir40
+*
+* synonym section
+*
+EY synonym EolOnly
+R synonym Restart
+I synonym Input
+O synonym Output
+S synonym Save
+XS synonym XSave
+EF synonym Expand
+PW synonym PageWidth
+PS synonym PageSize
+PC synonym PageContr
+A synonym Action
+SD synonym ScrDir
+SN synonym ScrNam
+CDir synonym CurDir
+WDir synonym WorkDir
+PDir synonym PutDir
+GDir synonym GridDir
+SCRIPT synonym ScriptNext
+SF synonym ScriptFrst
+LL synonym LogLine
+lo synonym LogOption
+LF synonym LogFile
+AO synonym AppendOut
+AL synonym AppendLog
+MP synonym MultiPass
+DF synonym DFormat
+TF synonym TFormat
+SCNTR synonym SolverCntr
+SMATR synonym SolverMatr
+SINST synonym SolverInst
+SSTAT synonym SolverStat
+SSOLU synonym SolverSolu
+SDICT synonym SolverDict
+PU synonym PoolUse
+PF1 synonym PoolFree1
+PF2 synonym PoolFree2
+PF3 synonym PoolFree3
+PF4 synonym IntVarUp
+PoolFree4 synonym IntVarUp
+PF5 synonym PoolFree5
+PF6 synonym PoolFree6
+PF7 synonym PoolFree7
+CX synonym CodeX
+TM synonym TopMargin
+LM synonym LeftMargin
+BM synonym BotMargin
+DP synonym DumpParms
+IDIR1 synonym InputDir1
+IDIR2 synonym InputDir2
+IDIR3 synonym InputDir3
+IDIR4 synonym InputDir4
+IDIR5 synonym InputDir5
+IDIR6 synonym InputDir6
+IDIR7 synonym InputDir7
+IDIR8 synonym InputDir8
+IDIR9 synonym InputDir9
+IDIR10 synonym InputDir10
+IDIR11 synonym InputDir11
+IDIR12 synonym InputDir12
+IDIR13 synonym InputDir13
+IDIR14 synonym InputDir14
+IDIR15 synonym InputDir15
+IDIR16 synonym InputDir16
+IDIR17 synonym InputDir17
+IDIR18 synonym InputDir18
+IDIR19 synonym InputDir19
+IDIR20 synonym InputDir20
+IDIR21 synonym InputDir21
+IDIR22 synonym InputDir22
+IDIR23 synonym InputDir23
+IDIR24 synonym InputDir24
+IDIR25 synonym InputDir25
+IDIR26 synonym InputDir26
+IDIR27 synonym InputDir27
+IDIR28 synonym InputDir28
+IDIR29 synonym InputDir29
+IDIR30 synonym InputDir30
+IDIR31 synonym InputDir31
+IDIR32 synonym InputDir32
+IDIR33 synonym InputDir33
+IDIR34 synonym InputDir34
+IDIR35 synonym InputDir35
+IDIR36 synonym InputDir36
+IDIR37 synonym InputDir37
+IDIR38 synonym InputDir38
+IDIR39 synonym InputDir39
+IDIR40 synonym InputDir40
+IDIR synonym InputDir
+LDIR synonym LibIncDir
+SDIR synonym SysIncDir
+U1 synonym User1
+U2 synonym User2
+U3 synonym User3
+U4 synonym User4
+U5 synonym User5
+FW synonym ForceWork
+GLAN synonym GLanguage
+GFINC synonym GFinclude
+UT synonym UnitType
+GFIMP synonym GFImplicit
+RF synonym Reference
+ExecErr synonym MaxExecError
+PF synonym ParmFile
+ER synonym ErrorLog
+JT synonym JobTrace
+TL synonym TraceLevel
+ST synonym SetType
+SP synonym SavePoint
+SL synonym SolveLink
+noSolveSkip synonym Sys12
+HL synonym HeapLimit
+SE synonym ScrExt
+AE synonym AppendExpand
+ETL synonym ETLim
+PTOL synonym ProfileTol
+PFILE synonym ProfileFile
+GScript synonym GridScript
+DPLP synonym DumpParmsLogPrefix
+SO synonym SaveObfuscate
+XSO synonym XSaveObfuscate
+RN synonym RestartNamed
+RFLN synonym ReferenceLineNo
+CP synonym CompilerPreview
+*
+* deprecated section
+*
+ver144 deprecated
+ CtrlZ Enable reading control Z - not needed anymore - will be ignored
+ CtrlM Enable flexible line ending - all line endings are recognized
+ PoolUse Manage memory pools - not needed anymore - will be ignored
+ PoolFree1 Manage memory pools N - not needed anymore - will be ignored
+ PoolFree2 Manage memory pools N - not needed anymore - will be ignored
+ PoolFree3 Manage memory pools N - not needed anymore - will be ignored
+ PoolFree5 Manage memory pools N - not needed anymore - will be ignored
+ PoolFree6 Manage memory pools N - not needed anymore - will be ignored
+ PoolFree7 Manage memory pools N - not needed anymore - will be ignored
+ CodeX Controls the allocation of executable code - Not used anymore (will be ignored)
+ NlCon Nonlinear instructions search length - not needed anymore - will be ignored
+ GLanguage
+ GFinclude
+ UnitType
+ GFImplicit
+ GFExt  - inactive
+ SetType Used to set the type of --keys - not used anymore - will be ignored
+ver238 deprecated
+ TopMargin Output file page top margin
+ LeftMargin Output file page left margin
+ BotMargin Output file page bottom margin, lines added at the end of a page
+ver480 deprecated
+ UseDLL Use Cmex library instead of executable
+ Debug Run GAMS in debugging mode
+ver310 deprecated
+ PySetup GAMS/Python Setup
+ver460 deprecated
+ PyMultInst GAMS/Python Multiple Instance Interpreter - Not used anymore (will be ignored)
+*
+* Groups
+* <group-ident> group <group-number <help-context> <help-text>
+*
+general group 1 1 General options
+saverestar group 2 1 Save and Restart related options
+solvers group 3 1 Solver related options
+deprecated group 4 1 Deprecated options
+misc group 5 1 miscellaneous
+*** End of file

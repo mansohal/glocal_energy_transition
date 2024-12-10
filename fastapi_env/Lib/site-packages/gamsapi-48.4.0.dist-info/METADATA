@@ -1,0 +1,135 @@
+Metadata-Version: 2.1
+Name: gamsapi
+Version: 48.4.0
+Summary: GAMS Python API
+Home-page: http://www.gams.com
+Author: GAMS Development Corporation
+Author-email: support@gams.com
+License: MIT
+Project-URL: Documentation, https://www.gams.com/latest/docs/API_PY_OVERVIEW.html
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: all
+Requires-Dist: urllib3; extra == "all"
+Requires-Dist: pyodbc; extra == "all"
+Requires-Dist: pyyaml; extra == "all"
+Requires-Dist: pymysql; extra == "all"
+Requires-Dist: scipy; extra == "all"
+Requires-Dist: openpyxl>=3.1.0; extra == "all"
+Requires-Dist: python-dateutil; extra == "all"
+Requires-Dist: numpy; extra == "all"
+Requires-Dist: pandas<2.3,>=2.0; extra == "all"
+Requires-Dist: ply; extra == "all"
+Requires-Dist: pymssql; extra == "all"
+Requires-Dist: cerberus; extra == "all"
+Requires-Dist: ipython; extra == "all"
+Requires-Dist: sqlalchemy; extra == "all"
+Requires-Dist: psycopg2-binary; extra == "all"
+Provides-Extra: connect
+Requires-Dist: pandas<2.3,>=2.0; extra == "connect"
+Requires-Dist: pyyaml; extra == "connect"
+Requires-Dist: openpyxl>=3.1.0; extra == "connect"
+Requires-Dist: sqlalchemy; extra == "connect"
+Requires-Dist: cerberus; extra == "connect"
+Requires-Dist: pyodbc; extra == "connect"
+Requires-Dist: psycopg2-binary; extra == "connect"
+Requires-Dist: pymysql; extra == "connect"
+Requires-Dist: pymssql; extra == "connect"
+Provides-Extra: control
+Requires-Dist: urllib3; extra == "control"
+Provides-Extra: core
+Requires-Dist: ply; extra == "core"
+Requires-Dist: numpy; extra == "core"
+Provides-Extra: engine
+Requires-Dist: python-dateutil; extra == "engine"
+Requires-Dist: urllib3; extra == "engine"
+Provides-Extra: magic
+Requires-Dist: ipython; extra == "magic"
+Requires-Dist: pandas<2.3,>=2.0; extra == "magic"
+Provides-Extra: tools
+Requires-Dist: pandas<2.3,>=2.0; extra == "tools"
+Provides-Extra: transfer
+Requires-Dist: pandas<2.3,>=2.0; extra == "transfer"
+Requires-Dist: scipy; extra == "transfer"
+
+
+<div align="center">
+  <img src="https://www.gams.com/img/gams_logo.svg"><br>
+</div>
+
+-----------------
+
+# gamsapi: powerful Python toolkit to manage GAMS (i.e., sparse) data and control GAMS solves
+
+## What is it?
+
+**gamsapi** is a Python package that includes submodules to control GAMS, manipulate and
+transfer data to/from the GAMS modeling system (through GDX files or in-memory objects).
+This functionality is available from a variety of different Python interfaces including
+standard Python scripts and Jupyter Notebooks. We strive to make it as **simple** as
+possible for users to generate, debug, customize, and ultimately use data to solve
+optimization problems -- all while maintaining high performance.
+
+
+## Main Features
+Here are just a few of the things that **gamsapi** does well:
+
+  - Seamlessly integrates GAMS data requirements into standard data pipelines (i.e., Pandas, Numpy)
+  - Link and harmonize data sets across different symbols
+  - Clean/debug data **before** it enters the modeling environment
+  - Customize the look and feel of the data (i.e., labeling conventions)
+  - Bring data to GAMS from a variety of different starting points
+  - Send model output to a variety of different data endpoints (SQL, CSV, Excel, etc.)
+  - Automatic data reshaping and standardization -- will work to translate your data formats into the Pandas DataFrame standard
+  - Control GAMS model solves and model specification
+
+## Where to get it
+The source code is currently available with any typical [GAMS system](https://www.gams.com/download/).
+No license is needed in order to use **gamsapi**.  A license is necessary in order to solve GAMS models.
+
+A free [demo license](https://www.gams.com/try_gams/) is available!
+
+## Dependencies
+Installing **gamsapi** will not install any third-party dependencies, as such, it only contains basic functionality.
+Users should modify this base installation by choosing **extras** to install -- extras are described in the [documentation](https://www.gams.com/latest/docs/API_PY_GETTING_STARTED.html#PY_PIP_INSTALL_BDIST).
+
+```sh
+# from PyPI (with extra "transfer")
+pip install gamsapi[transfer]
+```
+
+```sh
+# from PyPI (with extras "transfer" and "magic")
+pip install gamsapi[transfer,magic]
+```
+
+```sh
+# from PyPI (include all dependencies)
+pip install gamsapi[all]
+```
+
+## Documentation
+The official documentation is hosted on [gams.com](https://www.gams.com/latest/docs/API_PY_GETTING_STARTED.html).
+
+## Getting Help
+
+For usage questions, the best place to go to is [GAMS](https://www.gams.com/latest/docs/API_PY_GETTING_STARTED.html).
+General questions and discussions can also take place on the [GAMS World Forum](https://forum.gamsworld.org).
+
+## Discussion and Development
+If you have a design request or concern, please write to support@gams.com.

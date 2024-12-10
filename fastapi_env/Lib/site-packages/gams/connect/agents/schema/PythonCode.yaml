@@ -1,0 +1,6 @@
+code:
+  type: string
+  required: true
+trace:
+  type: integer
+  default: 0

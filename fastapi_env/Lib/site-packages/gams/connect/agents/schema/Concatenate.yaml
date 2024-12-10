@@ -1,0 +1,52 @@
+dimensionMap:
+  type: dict
+  default: null
+  nullable: true
+emptyUel:
+  type: string
+  default: "-"
+outputDimensions:
+  default: all
+  oneof:
+  - type: string
+    allowed: [all]
+  - type: list
+    schema:
+      type: string
+parameterName:
+  type: string
+  default: parameterOutput
+setName:
+  type: string
+  default: setOutput
+skip:
+  type: string
+  default: null
+  nullable: true
+  allowed: [set, par]
+symbolsDimension:
+  type: boolean
+  default: true
+universalDimension:
+  type: string
+  default: uni
+trace:
+  type: integer
+  default: 0
+symbols:
+  default: all
+  oneof:
+  - type: string
+    allowed: [all]
+  - type: list
+    schema:
+      type: dict
+      allow_unknown: false
+      schema:
+        name:
+          type: string
+          required: true
+        newName:
+          type: string
+          default: null
+          nullable: true

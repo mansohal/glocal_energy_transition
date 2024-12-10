@@ -1,0 +1,81 @@
+file:
+  type: string
+  required: true
+columnDimension:
+  default: infer
+  oneof:
+  - type: string
+    allowed: [infer]
+  - type: integer
+    min: 0
+    max: 20
+clearSheet:
+  type: boolean
+  default: false
+mergedCells:
+  type: boolean
+  default: false
+tableOfContents:
+  default: false
+  oneof:
+  - type: boolean
+  - type: dict
+    schema:
+      sheetName:
+        type: string
+        default: "Table Of Contents"
+      sort:
+        type: boolean
+        default: false
+      emptySymbols:
+        type: boolean
+        default: false
+valueSubstitutions:
+  type: dict
+  default: null
+  nullable: true
+index:
+  type: string
+  default: null
+  nullable: true
+trace:
+  type: integer
+  default: 0
+symbols:
+  default: all
+  oneof:
+  - type: string
+    allowed: [all]
+  - type: list
+    schema:
+      type: dict
+      allow_unknown: false
+      schema:
+        name:
+          type: string
+          required: true
+        range:
+          type: string
+          default: null
+          nullable: true
+        columnDimension:
+          default: null
+          nullable: true
+          oneof:
+          - type: integer
+            min: 0
+            max: 20
+          - type: string
+            allowed: [infer]
+        clearSheet:
+          type: boolean
+          default: null
+          nullable: true
+        mergedCells:
+          type: boolean
+          default: null
+          nullable: true
+        valueSubstitutions:
+          type: dict
+          default: null
+          nullable: true

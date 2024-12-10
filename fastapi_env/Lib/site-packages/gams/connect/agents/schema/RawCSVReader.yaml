@@ -1,0 +1,34 @@
+file:
+  type: string
+  required: true
+cName:
+  type: string
+  default: c
+columnLabel:
+  type: string
+  default: C
+rName:
+  type: string
+  default: r
+rowLabel:
+  type: string
+  default: R
+vfName:
+  type: string
+  default: vf
+vsName:
+  type: string
+  default: vs
+vuName:
+  type: string
+  default: vu
+readAsString:
+  type: boolean
+  default: true
+readCSVArguments:
+  type: dict
+  default: null
+  nullable: true
+trace:
+  type: integer
+  default: 0

@@ -1,0 +1,97 @@
+connection:
+  type: dict
+  required: true
+connectionType:
+  type: string
+  default: sqlite
+  allowed: [pyodbc, sqlalchemy, postgres, sqlite, mysql, sqlserver, access]
+connectionArguments:
+  type: dict
+  default: null
+  nullable: true
+schemaName:
+  type: string
+  default: null
+  nullable: true
+ifExists:
+  type: string
+  default: fail
+  allowed: [append, replace, fail]
+insertMethod:
+  type: string
+  default: default
+  allowed: [bcp, bulkInsert, default]
+unstack:
+  type: boolean
+  default: false
+skipText:
+  type: boolean
+  default: false
+valueSubstitutions:
+  type: dict
+  default: null
+  nullable: true
+columnEncloser:
+  type: string
+  default: "'"
+dTypeMap:
+  type: dict
+  default: null
+  nullable: true
+toSQLArguments:
+  type: dict
+  default: null
+  nullable: true
+trace:
+  type: integer
+  default: 0
+symbols:
+  default: all
+  oneof:
+  - type: string
+    allowed: [all]
+  - type: list
+    schema:
+      type: dict
+      allow_unknown: false
+      schema:
+        name:
+          type: string
+          required: true
+        tableName:
+          type: string
+          required: true
+        schemaName:
+          type: string
+          default: null
+          nullable: true
+        ifExists:
+          type: string
+          default: null
+          allowed: [append, replace, fail]
+          nullable: true
+        insertMethod:
+          type: string
+          default: null
+          allowed: [bcp, bulkInsert, default]
+          nullable: true
+        unstack:
+          type: boolean
+          default: null
+          nullable: true
+        skipText:
+          type: boolean
+          default: null
+          nullable: true
+        valueSubstitutions:
+          type: dict
+          default: null
+          nullable: true
+        dTypeMap:
+          type: dict
+          default: null
+          nullable: true
+        toSQLArguments:
+          type: dict
+          default: null
+          nullable: true

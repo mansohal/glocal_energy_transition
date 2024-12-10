@@ -1,0 +1,16 @@
+D:\glocal_energy_transition\winsw.exe install
+
+
+D:\glocal_energy_transition\winsw.exe start
+
+to STOP the service: 
+D:\glocal_energy_transition\winsw.exe stop
+
+
+if you wish to uninstall the service: 
+D:\glocal_energy_transition\winsw.exe uninstall
+
+
+if you wish to check the STATUS of the service
+D:\glocal_energy_transition\winsw.exe status
+ 

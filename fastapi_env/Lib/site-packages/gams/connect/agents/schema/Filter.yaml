@@ -1,0 +1,74 @@
+name:
+  type: string
+  required: true
+newName:
+  type: string
+  required: true
+trace:
+  type: integer
+  default: 0
+labelFilters:
+  type: list
+  default: null
+  nullable: true
+  schema:
+    type: dict
+    schema:
+      dimension:
+        default: all
+        oneof:
+        - type: string
+          allowed: [all]
+        - type: integer
+          min: 1
+          max: 20
+      keep:
+        type: list
+        default: null
+        nullable: true
+        required: true
+        excludes: [regex, reject]
+        schema:
+          type: string
+      regex:
+        type: string
+        default: null
+        nullable: true
+        required: true
+        excludes: [keep, reject]
+      reject:
+        type: list
+        default: null
+        nullable: true
+        required: true
+        excludes: [regex, keep]
+        schema:
+          type: string
+valueFilters:
+  type: list
+  default: null
+  nullable: true
+  schema:
+    type: dict
+    schema:
+      attribute:
+        type: string
+        default: all
+        allowed: [all, value, level, marginal, upper, lower, scale]
+      rule:
+        type: string
+        default: null
+        nullable: true
+      ruleIdentifier:
+        type: string
+        default: x
+      rejectSpecialValues:
+        default: null
+        nullable: true
+        oneof:
+        - type: string
+          allowed: [EPS, INF, -INF, UNDEF, NA]
+        - type: list
+          schema:
+            type: string
+            allowed: [EPS, INF, -INF, UNDEF, NA]

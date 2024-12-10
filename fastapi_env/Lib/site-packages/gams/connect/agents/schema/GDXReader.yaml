@@ -1,0 +1,23 @@
+file:
+  type: string
+  required: true
+trace:
+  type: integer
+  default: 0
+symbols:
+  default: all
+  oneof:
+  - type: string
+    allowed: [all]
+  - type: list
+    schema:
+      type: dict
+      allow_unknown: false
+      schema:
+        name:
+          type: string
+          required: true
+        newName:
+          type: string
+          default: null
+          nullable: true

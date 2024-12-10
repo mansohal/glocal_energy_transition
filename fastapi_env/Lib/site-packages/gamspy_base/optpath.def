@@ -1,0 +1,231 @@
+*
+* optpath.def
+*
+path lookup
+output boolean 0 1 1 2 turns all output off or on
+output_model_statistics boolean 0 0 0 2 *** hidden
+cumulative_iteration_limit integer 0 10000 0 maxint 1 1 maximum minor iterations allowed
+adaptive_delta_break double 0 0 mindouble maxdouble 0 1 *** hidden
+adaptive_delta_current double 0 0 mindouble maxdouble 0 1 *** hidden
+adaptive_delta_high double 0 0 mindouble maxdouble 0 1 *** hidden
+adaptive_delta_low double 0 0 mindouble maxdouble 0 1 *** hidden
+adaptive_iteration integer 0 0 minint maxint 0 1 *** hidden
+adaptive_iterations_high integer 0 0 minint maxint 0 1 *** hidden
+adaptive_iterations_low integer 0 0 minint maxint 0 1 *** hidden
+adaptive_pivot_tolerance double 0 0 mindouble maxdouble 0 1 *** hidden
+adaptive_tau_high double 0 0 mindouble maxdouble 0 1 *** hidden
+adaptive_tau_low double 0 0 mindouble maxdouble 0 1 *** hidden
+check_skew_symmetry boolean 0 0 0 1 *** hidden
+chen_lambda double 0 0.8 0 1 1 1 lambda parameter for Chen-Chen-Kanzow residual
+convergence_tolerance double 0 1e-6 0 maxdouble 1 1 stopping criterion
+crash_convergence_tolerance double 0 0 mindouble maxdouble 0 1 *** hidden
+crash_iteration_limit integer 0 50 0 maxint 1 1 maximum iterations allowed in basis crash
+crash_merit_function enumstr 0 "fischer" 1 1 merit function used in crash method
+ "normal" 1 Use the normal map
+ "fischer" 1 Use the Fischer function
+crash_method enumstr 0 "pnewton" 1 1 pnewton or none
+ "pnewton" 1 Use projected Newton method
+ "none" 1
+crash_minimum_dimension integer 0 1 0 maxint 1 1 minimum problem dimension to perform crash
+crash_minor_iteration_limit integer 0 0 minint maxint 0 1 *** hidden
+crash_nbchange_limit integer 0 1 0 maxint 1 1 limit on crash iterations without basis change
+crash_perturb boolean 0 1 1 1 perturb the problem using pnewton crash
+crash_proximal_increase_factor double 0 0 mindouble maxdouble 0 1 *** hidden
+crash_proximal_initial_maximum double 0 0 mindouble maxdouble 0 1 *** hidden
+crash_proximal_maximum double 0 0 mindouble maxdouble 0 1 *** hidden
+crash_proximal_merit_factor double 0 0 mindouble maxdouble 0 1 *** hidden
+crash_proximal_minimum double 0 0 mindouble maxdouble 0 1 *** hidden
+crash_proximal_shrink_factor double 0 0 mindouble maxdouble 0 1 *** hidden
+crash_refine_frequency integer 0 0 minint maxint 0 1 *** hidden
+crash_searchtype enumstr 0 "line" 1 1 search type to use in the crash method
+ "line" 1 Use a linesearch
+ "arc" 1 Use an arcsearch
+crash_shrink_factor double 0 0 mindouble maxdouble 0 1 *** hidden
+crash_sigma double 0 0 mindouble maxdouble 0 1 *** hidden
+crash_stepsize_minimum double 0 0 mindouble maxdouble 0 1 *** hidden
+decomposition_size_limit double 0 0 mindouble maxdouble 0 1 *** hidden
+detect_sign_flip boolean 0 0 0 1 *** hidden
+devex_delta double 0 0 mindouble maxdouble 0 1 *** hidden
+devex_pivot_tolerance double 0 0 mindouble maxdouble 0 1 *** hidden
+expand_delta double 0 0 mindouble maxdouble 0 1 *** hidden
+expand_delta_current double 0 0 mindouble maxdouble 0 1 *** hidden
+expand_delta_end double 0 0 mindouble maxdouble 0 1 *** hidden
+expand_delta_start double 0 0 mindouble maxdouble 0 1 *** hidden
+expand_iteration integer 0 0 minint maxint 0 1 *** hidden
+expand_maximum_iterations integer 0 0 minint maxint 0 1 *** hidden
+expand_pivot_tolerance double 0 0 mindouble maxdouble 0 1 *** hidden
+expand_tau double 0 0 mindouble maxdouble 0 1 *** hidden
+factorization_elbowroom double 0 0 mindouble maxdouble 0 1 *** hidden
+factorization_library_name string 0 "" 1 1 name of factorization library
+factorization_luroom double 0 0 mindouble maxdouble 0 1 *** hidden
+factorization_method enumstr 0 "lusol" 1 1 basis package to use
+ "lusol" 1
+ "blu_lusol" 1
+ "umfpack" 1
+ "umfpack64" 1
+ "highs" 1
+ "conopt" 1
+factorization_pivot_tolerance double 0 0 mindouble maxdouble 0 1 *** hidden
+factorization_pivot_type integer 0 0 minint maxint 0 1 *** hidden
+factorization_small_tolerance double 0 0 mindouble maxdouble 0 1 *** hidden
+factorization_tolerance double 0 0 mindouble maxdouble 0 1 *** hidden
+factorization_update_limit integer 0 0 minint maxint 0 1 *** hidden
+factorization_update_ratio double 0 0 mindouble maxdouble 0 1 *** hidden
+factorization_update_tolerance double 0 0 mindouble maxdouble 0 1 *** hidden
+factorization_vectorroom double 0 0 mindouble maxdouble 0 1 *** hidden
+factorization_zero_tolerance double 0 0 mindouble maxdouble 0 1 *** hidden
+gmres_update_frequency integer 0 0 minint maxint 0 1 *** hidden
+gradient_refine_frequency integer 0 0 minint maxint 0 1 *** hidden
+gradient_searchtype enumstr 0 "arc" 1 1 search type to use on a gradient step
+ "line" 1 Use a linesearch
+ "arc" 1 Use an arcsearch
+gradient_shrink_factor double 0 0 mindouble maxdouble 0 1 *** hidden
+gradient_sigma double 0 0 mindouble maxdouble 0 1 *** hidden
+gradient_step_limit integer 0 5 0 maxint 1 1 gradient steps allowed before restarting
+gradient_stepsize_minimum double 0 0 mindouble maxdouble 0 1 *** hidden
+ilu_drop_tolerance double 0 0 mindouble maxdouble 0 1 *** hidden
+ilu_perturbation double 0 0 mindouble maxdouble 0 1 *** hidden
+ilu_perturbation_decrease_factor double 0 0 mindouble maxdouble 0 1 *** hidden
+ilu_perturbation_increase_factor double 0 0 mindouble maxdouble 0 1 *** hidden
+ilu_perturbation_initial_value double 0 0 mindouble maxdouble 0 1 *** hidden
+ilu_perturbation_small_value double 0 0 mindouble maxdouble 0 1 *** hidden
+infinity double 0 0 mindouble maxdouble 0 1 *** hidden
+interrupt_limit integer 0 5 1 maxint 1 1 ctrl-C's required before a hard kill of the solver
+jacobian_smoothing double 0 0 mindouble maxdouble 0 1 *** hidden
+lemke_artificial_maximum double 0 0 mindouble maxdouble 0 1 *** hidden
+lemke_artificial_minimum double 0 0 mindouble maxdouble 0 1 *** hidden
+lemke_cycle_limit integer 0 0 minint maxint 0 1 *** hidden
+lemke_maximum_iteration_limit integer 0 0 minint maxint 0 1 *** hidden
+lemke_pivot_type enumstr 0 "expand" 0 1 *** hidden
+ "textbook" 1
+ "devex" 1
+ "expand" 1
+ "adaptive" 1
+lemke_rank_deficiency_iterations integer 0 10 0 maxint 1 1 number of attempts made to fix rank-deficient basis during Lemke start
+lemke_rayterm_minimum double 0 0 mindouble maxdouble 0 1 *** hidden
+lemke_return_best_point boolean 0 0 0 1 *** hidden
+lemke_scale_residual boolean 0 0 0 1 *** hidden
+lemke_size_factor double 0 0 mindouble maxdouble 0 1 *** hidden
+lemke_start enumstr 0 "automatic" 1 1 frequency of lemke starts
+ "always" 1 Use a Lemke start for each LCP subproblem
+ "automatic" 1 Determined by algorithm
+ "first" 1 Use a Lemke start for the first LCP subproblem
+lemke_start_tolerance double 0 0 mindouble maxdouble 0 1 *** hidden
+lemke_start_type enumstr 0 "slack" 1 1 type of lemke start
+ "advanced" 1 Start Lemke method using an advanced basis
+ "slack" 1 Start Lemke method using an all-slack basis
+linear_model_perturb boolean 0 0 0 1 *** hidden
+linear_model_presolve boolean 0 0 0 1 *** hidden
+linear_model_scale boolean 0 0 0 1 *** hidden
+linear_scale_method enumstr 0 "diagonal" 0 1 *** hidden
+ "Todd" 1
+ "Chen" 1
+ "diagonal" 1
+ "row" 1
+ "col" 1
+ "both" 1
+ "symmetric" 1
+ "ro1" 1
+ "ro2" 1
+ "ro3" 1
+ "ro4" 1
+major_iteration_limit integer 0 500 0 maxint 1 1 maximum major iterations allowed
+merit_function enumstr 0 "fischer" 1 1 merit function to use (normal or fischer)
+ "normal" 1 Use the normal map
+ "fischer" 1 Use the Fischer function
+minor_iteration_limit integer 0 1000 0 maxint 1 1 minor iterations allowed in each major iteration: default MIN(2n,iterlim)
+nms boolean 0 1 1 1 allow line searching, watch-dogging, and nonmonotone descent
+nms_delta_min double 0 0 mindouble maxdouble 0 1 *** hidden
+nms_delta_shrink_factor double 0 0 mindouble maxdouble 0 1 *** hidden
+nms_initial_monotone_steps integer 0 0 minint maxint 0 1 *** hidden
+nms_initial_reference_factor double 0 20 0 maxdouble 1 1 controls size of initial reference value
+nms_initial_reference_minimum double 0 0 mindouble maxdouble 0 1 *** hidden
+nms_initial_stepsize_factor double 0 0 mindouble maxdouble 0 1 *** hidden
+nms_initial_stepsize_minimum double 0 0 mindouble maxdouble 0 1 *** hidden
+nms_large_reference_factor double 0 0 mindouble maxdouble 0 1 *** hidden
+nms_maximum_watchdogs integer 0 5 0 maxint 1 1 maximum number of watchdog steps allowed
+nms_memory_size integer 0 10 0 maxint 1 1 number of reference values kept
+nms_mstep_frequency integer 0 10 0 maxint 1 1 frequency at which m-steps are performed
+nms_pathsearch_interpolate boolean 0 0 0 1 *** hidden
+nms_refine_frequency integer 0 0 minint maxint 0 1 *** hidden
+nms_searchtype enumstr 0 "line" 1 1 search type to use
+ "line" 1 Use a linesearch
+ "arc" 1 Use an arcsearch
+nms_shrink_factor double 0 0 mindouble maxdouble 0 1 *** hidden
+nms_sigma double 0 0 mindouble maxdouble 0 1 *** hidden
+nms_stepsize_minimum double 0 0 mindouble maxdouble 0 1 *** hidden
+nonlinear_model_perturb boolean 0 0 0 1 *** hidden
+nonlinear_model_presolve boolean 0 0 0 1 *** hidden
+nonlinear_model_scale boolean 0 0 0 1 *** hidden
+nonlinear_model_use_start boolean 0 0 0 1 *** hidden
+output_crash_iterations boolean 0 1 1 2 output information on crash iterations
+output_crash_iterations_frequency integer 0 1 1 maxint 1 2 frequency at which crash iteration log is printed
+output_errors boolean 0 1 1 2 output error messages
+output_factorization_singularities boolean 0 0 0 2 *** hidden
+output_factorization_updates boolean 0 0 0 2 *** hidden
+output_factorization_updates_frequency integer 0 0 minint maxint 0 2 *** hidden
+output_final_degeneracy_statistics boolean 0 0 1 2 print information regarding degeneracy at the solution
+output_final_point boolean 0 0 1 2 output final point returned from PATH
+output_final_point_statistics boolean 0 1 1 2 output information about the point, function, and Jacobian at the final point
+output_final_scaling_statistics boolean 0 0 1 2 display matrix norms on the Jacobian at the final point
+output_final_statistics boolean 0 1 1 2 output evaluation of available merit functions at the final point
+output_final_summary boolean 0 1 1 2 output summary information
+output_hidden_options boolean 0 0 0 2 *** hidden
+output_initial_point boolean 0 0 1 2 output initial point given to PATH
+output_initial_point_statistics boolean 0 1 1 2 output information about the point, function, and Jacobian at the initial point
+output_initial_scaling_statistics boolean 0 1 1 2 display matrix norms on the Jacobian at the initial point
+output_initial_statistics boolean 0 0 1 2 output evaluation of available merit functions at the initial point
+output_license boolean 0 0 0 2 *** hidden
+output_linear_model boolean 0 0 1 2 output linear model at each major iteration
+output_major_iterations boolean 0 1 1 2 output information on major iterations
+output_major_iterations_frequency integer 0 1 1 maxint 1 2 frequency at which major iteration log is printed
+output_maximum_zero_log integer 0 10 0 maxint 1 2 limits zero columns reported to log file
+output_maximum_zero_listing integer 0 1000 0 maxint 1 2 limits zero columns reported to listing file
+output_minor_iterations boolean 0 1 1 2 output information on minor iterations
+output_minor_iterations_frequency integer 0 500 1 maxint 1 2 frequency at which minor iteration log is printed
+output_nms_iterations boolean 0 0 0 2 *** hidden
+output_nms_iterations_frequency integer 0 0 minint maxint 0 2 *** hidden
+option_direct strlist 1 0 1 pass options directly to PATH library
+option_file string 1 "" 1 1 name of option file for PATHLIB to read
+output_options boolean 0 0 1 2 output all options and their values
+output_preprocess_level integer 0 1 -1 maxint 1 2 control output of preprocessing information
+output_restart_log boolean 0 1 1 2 output options during restarts
+output_time boolean 1 0 1 2 output breakdown of where time is spent
+output_warnings boolean 0 0 1 2 output warning messages
+path_basis_modify_tol double 0 0 mindouble maxdouble 0 1 *** hidden
+path_basis_modify_verbose boolean 0 0 0 1 *** hidden
+preprocess boolean 0 1 1 1 turns preprocessing on/off
+preprocess_implied boolean 0 0 0 1 *** hidden
+preprocess_jacobian_tolerance double 0 0 mindouble maxdouble 0 1 *** hidden
+preprocess_recursive boolean 0 0 0 1 *** hidden
+preprocess_tighten boolean 0 0 0 1 *** hidden
+preprocess_zero_tolerance double 0 0 mindouble maxdouble 0 1 *** hidden
+project_start boolean 0 0 0 1 *** hidden
+proximal_dual boolean 0 0 0 1 *** hidden
+proximal_increase_factor double 0 0 mindouble maxdouble 0 1 *** hidden
+proximal_initial double 0 0 mindouble maxdouble 0 1 *** hidden
+proximal_initial_maximum double 0 0 mindouble maxdouble 0 1 *** hidden
+proximal_merit_factor double 0 0 mindouble maxdouble 0 1 *** hidden
+proximal_minimum double 0 0 mindouble maxdouble 0 1 *** hidden
+proximal_perturbation double 0 0 0 maxdouble 1 1 initial perturbation
+proximal_primal boolean 0 0 0 1 *** hidden
+proximal_shrink_factor double 0 0 mindouble maxdouble 0 1 *** hidden
+recovery_method enumstr 0 "none" 0 1 *** hidden
+ "none" 1
+residual_factor double 0 0 mindouble maxdouble 0 1 *** hidden
+residual_size double 0 0 mindouble maxdouble 0 1 *** hidden
+restart_limit integer 0 0 minint maxint 0 1 *** hidden: maximum number of restarts attempted
+restart_stationary_limit integer 0 0 minint maxint 0 1 *** hidden
+restart_stationary_tolerance double 0 0 mindouble maxdouble 0 1 *** hidden
+return_best_point boolean 0 0 0 1 *** hidden: return the best point encountered, not the absolute last iterate
+textbook_delta double 0 0 mindouble maxdouble 0 1 *** hidden
+textbook_pivot_tolerance double 0 0 mindouble maxdouble 0 1 *** hidden
+time_limit double 0 0 0 maxdouble 1 1 number of seconds algorithm is allowed to run
+myeolchar EOLCOMM ;#!
+*
+* Groups
+* <group-ident> group <group-number <help-context> <help-text>
+*
+general group 1 1 General options
+output group 2 1 Output options
+*** End of file

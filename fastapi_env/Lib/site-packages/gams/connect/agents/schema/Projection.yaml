@@ -1,0 +1,24 @@
+name:
+  required: true
+  oneof:
+  - type: string
+  - type: list
+    schema:
+      type: [string]
+newName:
+  type: string
+  required: true
+aggregationMethod:
+  type: string
+  default: null
+  nullable: true
+asSet:
+  type: boolean
+  default: false
+text:
+  type: string
+  default: null
+  nullable: true
+trace:
+  type: integer
+  default: 0

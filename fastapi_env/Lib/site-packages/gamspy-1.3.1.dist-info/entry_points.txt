@@ -1,0 +1,2 @@
+[console_scripts]
+gamspy = gamspy._cli.cmdline:main
