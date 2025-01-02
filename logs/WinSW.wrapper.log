@@ -16,3 +16,5 @@ System.IO.InvalidDataException: 'action' is missing
 2024-12-10 16:22:07,390 DEBUG - Starting WinSW in console mode
 2024-12-10 16:22:07,441 INFO  - Uninstalling service 'Glocal Energy Transition Service (glocal_energy_transition)'...
 2024-12-10 16:22:07,449 INFO  - Service 'Glocal Energy Transition Service (glocal_energy_transition)' was uninstalled successfully.
+2025-01-01 18:05:28,019 DEBUG - Starting WinSW in service mode
+2025-01-01 18:05:42,273 DEBUG - Starting WinSW in service mode
